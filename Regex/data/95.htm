@@ -1,0 +1,365 @@
+<HTML>
+<HEAD>
+<TITLE>Mor Harchol-Balter's Homepage</TITLE>
+</HEAD>
+
+<!body text="black" bgcolor="lightyellow" link="#990033" vlink="#990033" ALINK="brown"> 
+<body text="black" bgcolor="#FFFFCC" link="#990033" vlink="#990033" ALINK="brown"> 
+
+<head>
+<meta name="description" content="Performance Modeling, Queueing Theory, Scheduling">
+<meta name="keywords" content="performance modeling,queueing theory,scheduling,resource allocation ">
+</head> 
+
+<TABLE BORDER=0 cellpadding=0>
+  <TR valign="center">
+    <TD> <img alt=" " src="8051-2.jpg" BORDER=2 HEIGHT=300> </TD>
+    <TD nowrap>
+      <dl>
+        <dd><strong><H2> <font color=brown> Mor Harchol-Balter <br> Professor of Computer Science  </font></H2></strong>
+<p>
+        <dd><strong><a href="http://www.cs.cmu.edu/">
+        Department of Computer Science</a></strong>
+        <dd><strong> Carnegie Mellon University</strong>
+        <dd><strong> Pittsburgh, PA 15213</strong>
+<p>
+        <dd><strong>Office: Gates Hall 7207</strong>
+        <dd><strong>Phone: (412) 268-7893</strong>
+        <dd><strong>Fax: (412) 268-5576</strong>
+        <dd><strong>harchol@cs.cmu.edu</strong>
+<p>
+        <dd><strong>Exec. Assistant: <a href="http://people.cs.cmu.edu/Person/4547">Nancy Conway</a> </strong>
+<TD>
+<dl>
+<dd>  <H3> <font color="red"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Finally Here!  </font>  </H3><p>
+<dd> <font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.performancemodeling.org"><img alt=" " src="bookcover.png" BORDER=2 HEIGHT=250> </font> </TD>
+</dl>
+<p>
+
+     </dl>
+  </TD>
+</TR>
+</TABLE>
+<p>
+
+
+
+<hr width=100% noshade>
+<table BORDER=0 width=100% cellpadding=0>
+<tr>
+<font>
+<td>
+<u><a href="bio.html"><b><font color=blue><H3> SHORT BIO </H3></b></font></a></u>
+</font>
+</td>
+<font>
+<td>
+<font>
+<a href="cv.ps"><b><font   color=blue><H3> CV (in postscript) </H3> </b></font></a>
+</font>
+</td>
+<td>
+<font>
+<a href="cv.pdf"><b><font   color=blue><H3> CV (in pdf) </H3></b></font></a>
+</font>
+</td>
+<td>
+<font>
+<a href="Papers/papers.html"><b><font   color=blue><H3> RESEARCH PAPERS ONLINE </H3> </b></font></a>
+</td>
+</tr>
+</table>
+
+<hr width=100% noshade>
+
+<p>
+
+
+<H3> <font color="red"> General Chair ACM SIGMETRICS 2013, CMU, June 2013 </font>  </H3>
+<H2> <A HREF="http://www.sigmetrics.org/sigmetrics2013/">  
+<img alt=" " src="banner2.jpg" BORDER=2 HEIGHT=150> </a> 
+</H2>
+
+<H3> <b> <font color="darkgreen"> RESEARCH </font> </font> </H3>
+
+
+I am interested in the performance analysis and design of computer
+systems, particularly distributed systems.  I work on finding
+analytical models which capture the important characteristics of a
+computer system and allow me to redesign the system to improve its
+performance (response time). 
+<p>
+I believe that many conventional wisdoms on which we base system
+designs are not well understood and sometimes false, leading to
+inferior designs.  Many of our existing beliefs stem from queueing
+research in the 60's and 70's -- the great era for system performance
+modeling.  Unfortunately, back then we did not have all the analytical
+and computational tools available today.  Consequently, some
+questions were answered only under the approximation of
+Markovian workloads (exponentially distributed job sizes) which we now
+know to be non-representative of many real-world workloads (which show
+much greater variability and often heavy tails).  Also, many 
+multi-server system models and scheduling/routing schemes
+were not analytically tractable at that time. 
+<p>
+My research revisits these very classic questions in system design,
+armed with today's new queueing and computational techniques, as well
+as a new perspective on real-world workloads, performance metrics, and
+implementation experience.
+I work on deriving new fundamental theorems in system design, many of
+which seem counterintuitive in light of age-old beliefs.  I then
+incorporate these theorems into implementations of 
+Web servers, database servers, and distributed server
+systems. 
+<p>
+Here are a few examples of commonly-held beliefs that my research challenges:
+<UL>
+<LI>  Thousands of "load balancing" heuristics do exactly that -- they
+   aim to balance the load among the existing hosts.  But is load balancing
+   necessarily a good thing?
+<p>
+
+
+
+
+
+<LI> Ever notice that the optimal scheduling policy,
+   Shortest-Remaining-Processing-Time-First (SRPT), is rarely used in
+   practice?  There's a fear that the big jobs will "starve", or be
+   treated unfairly as compared with Processor-Sharing (PS).  But is
+   this a reality?
+<p>
+
+<LI> To minimize mean waiting time in a server farm, research suggests that each job should be sent to the server at which it will experience the least wait.  That seems good from the job's perspective, but is the greedy strategy best for the system as a whole?
+
+<p>
+<LI> Given a choice between a single machine with speed s, or n
+   identical machines each with speed s/n, which would you choose?
+   Think again ...
+<p>
+<LI>  Migrating active jobs is generally considered too expensive.
+   Killing jobs midway through execution and restarting them from scratch
+   later is even worse!  Says who?
+<p>
+<LI> Cycle stealing (using another machine's idle cycles to do your work) is
+a central theme in distributed systems and has been the topic of thousands
+of papers.  But can we quantify when cycle stealing pays off, as a function of switching costs and threshold parameters?
+</UL>
+
+<H3> <font color ="darkgreen">  My TENURE RESEARCH STATEMENT from May 2007: </font>  </H3>
+<UL>
+<LI> <a href="introduction.pdf"> <b> Introduction </b> </a>
+<LI> <a href="all-can-win.pdf"> <b> Sec 1: The SYNC Project:
+Scheduling Your Network Connections -- Why Favoring Short Jobs Helps All Jobs </b> </a>
+<LI> <a href="overload.pdf"> <b> Sec 2: Computer Systems with Fluctuating Load </b> </a>
+<LI> <a href="dbms.pdf"> <b> Sec 3: QoS for Database Management Systems </b> </a>
+<LI> <a href="openclosed.pdf"> <b> Sec 4: User Behaviors: Dangers of Closed versus Open Workload Generators </b> </a>
+<LI> <a href="serverfarms.pdf"> <b> Sec 5: Routing for Server Farms with Highly-Variable Job Sizes </b> </a>
+<LI> <a href="cyclestealing.pdf"> <b> Sec 6: Cycle Stealing, Threshold-Based Sharing, and Other 2D-Infinite Chains </b> </a>
+<LI> <a href="priorities.pdf"> <b> Sec 7: Priority Queueing and Capacity Planning for Server Farms </b> </a>
+<LI> <a href="teragrid.pdf"> <b> Sec 8: Auction-Based Scheduling for the TeraGrid </b> </a>
+</UL>
+<p>
+<p>
+
+<hr>
+
+<H3> <b> <font color="darkgreen"> SOME TALKS </font> </font> </H3>
+
+<ul>
+<li> (2009) Surprising Results on Task Assignment for High-Variability Workloads:
+<A
+HREF="Stanford10.ppt"> talk slides </A> and <A
+HREF="abstract-surprising.html"> abstract </A>. 
+</H4>  <p>
+<li> (2007) Scheduling in Server Farms:
+<A
+HREF="Lunteren07public.ppt"> talk slides </A> and <A
+HREF="abstract-serverfarmtalk.html"> abstract </A>. 
+</H4>  <p>
+<li>  (2006) Analysis of Cycle Stealing and Priority Queueing in Multi-Server Systems via Dimensionality Reduction Technique:
+<A
+HREF="StanfordCS07.ppt"> talk slides </A> and <A
+HREF="abstract-dimred.html"> abstract </A>. 
+</H4>
+<p>
+<li>  (2005) Scheduling Your Network Connections: the SYNC project
+<A
+HREF="sync05.ppt"> talk slides </A> and <A
+HREF="abstract-sync05.html"> abstract </A>. 
+</H4>
+<p>
+<li>  (2006) Open Workload Generators versus Closed: A cautionary tale
+<A
+HREF="openclosed.ppt"> Adam's talk slides </A> and <A
+HREF="abstract-openclosed.html"> abstract </A>. 
+</H4>
+<p>
+<li>  (2004) What Analytical Performance Modeling Teaches Us About Computer System Design
+<A
+HREF="perfmodeling.ppt"> talk slides </A> and <A
+HREF="abstract-perfmodeling.html"> abstract </A>. 
+</H4>
+<p>
+
+
+</ul>
+<hr>
+
+<p>
+<H3> <font color=darkgreen> Current PhD STUDENTS </font> </H3>
+<b> <A HREF="http://www.andrew.cmu.edu/~sdoroudi/"> Sherwin Doroudi </b> </A>
+<font color=black>  </font>
+<p>
+<b> <A HREF="http://www.cs.cmu.edu/~ksgardne/"> Kristy Gardner </b> </A>
+<font color=black>  </font>
+<p>
+<b> <A HREF="http://www.ece.cmu.edu/~yoonguk/"> Yoongu Kim </b> </A>
+<font color=black>  </font>  (mostly advised by Onur Mutlu)
+<p>
+<b> <A HREF="http://www.cs.cmu.edu/~timothyz/"> Timothy Zhu </b> </A>
+<font color=black>  </font>  
+<p>
+<H3> <font color=darkgreen> Graduated PhD STUDENTS </font> </H3>
+<b> <A HREF="http://www.cs.cmu.edu/~anshulg/"> Anshul Gandhi </b> </A>
+<font color=black>  </font>  Assistant Professor at SUNY Stony Brook, Computer Science Department.   
+Link to <b> <a HREF="http://reports-archive.adm.cs.cmu.edu/anon/2013/CMU-CS-13-110.pdf"> Anshul's thesis </b> </A>.
+<p>
+<b> <A HREF="http://www.cs.cmu.edu/~varun/"> Varun Gupta </b> </A>
+<font color=black> </font> Assistant Professor at University of Chicago, Booth School of Business</font>.
+Link to <b> <A HREF="http://www.cs.cmu.edu/~varun/papers/thesis_varun.pdf"> Varun's thesis </b> </A>. 
+<p>
+<b> <A HREF="http://www.cs.cmu.edu/~osogami/"> Takayuki Osogami </b> </A> 
+<font color=black>  </font> Researcher at IBM-TRL.  </font>
+Link to <b> <A HREF="http://www.cs.cmu.edu/~osogami/thesis"> Taka's thesis </b> </A>. 
+<p>
+<b> <A HREF="http://www.cs.cmu.edu/~cache/"> David McWherter </b> </A>
+<font color=black>  </font> Researcher at Google, Seattle. <p>
+<b> <A HREF="http://www.cs.cmu.edu/~bianca/"> Bianca Schroeder </b> </A> 
+<font color=black>  </font>  Associate Professor at University of Toronto, Computer Science.
+Link to <b> <A HREF="http://www.cs.cmu.edu/~bianca/thesis.pdf"> Bianca's thesis </b> </A>.
+<p>
+<b> <A HREF="http://www.cs.caltech.edu/~adamw/"> Adam Wierman </b> </A> 
+<font color=black>  </font>  Full Professor at Caltech, Computer Science.
+Link to <b> <A HREF="http://www.cs.caltech.edu/~adamw/thesis"> Adam's thesis </b> </A>.   Winner of 2007 SCS Distinguished Dissertation Award.
+<p>
+<hr>
+
+<p>
+
+
+<H3> <font color=darkgreen> PROFESSIONAL SERVICE </font> </H3>
+
+<li> OFFICES: 
+<ul>
+<li> <b> <A HREF="http://www.sigmetrics.org/sigmetrics2013/"> GENERAL CHAIR ACM Sigmetrics 2013 </b> </A>.
+<li> <b> <A HREF="http://www.cs.cmu.edu/~sigm07/"> TPC co-CHAIR ACM Sigmetrics 2007 </b> </A>.
+<li> <b> <A HREF="http://www.qest.org/qest2007/">  TCP co-CHAIR QEST 2007 </b> </A>.
+<li> <b> <A HREF="http://www.cs.cmu.edu/~harchol/WORMS04/"> TPC co-CHAIR First WORkshop on Multiserver Scheduling (WORMS04) </a>  <b> 
+<li> <b> <A HREF="
+http://www.aladdin.cs.cmu.edu/workshops/eindhoven/"> TPC co-CHAIR CMU/Eindhoven Collaborative Workshop on Queueing 2005 </a>  <b> 
+<li> <b> <A HREF="http://www.sigmetrics.org/"> Treasurer ACM Sigmetrics 2005-2007 </b> </A> 
+<li> <b> <A HREF="http://www.cs.umd.edu/conference/sigmetrics2001/"> Tutorials Chair ACM Sigmetrics 2001 </b> </A>
+</ul>
+<p>
+<li> PROGRAM COMMITTEES: 
+<ul>
+<li> <b> <A HREF="http://www-net.cs.umass.edu/sigmetrics2000/"> 
+Sigmetrics 2000  </b> </A>, 
+<b> <A HREF="http://www.cs.umd.edu/conference/sigmetrics2001/"> 
+Sigmetrics 2001 </b> </A>, 
+<b> <A HREF="http://www.ee.princeton.edu/~sigm2002"> 
+Sigmetrics 2002 </b> </A>,  
+<b> <A HREF="http://www.crhc.uiuc.edu/sigm2003/">Sigmetrics 2003 </b> </A>,   
+<A HREF="http://www.cs.columbia.edu/~sigm2004/">Sigmetrics 2004 </b> </A> , <br/>
+<b> <A HREF="http://www.cse.cuhk.edu.hk/conference/sigmetrics2005"> Sigmetrics 2005 </b> </A>, 
+<b> <A HREF="http://www.cs.wm.edu/sigm06/"> Sigmetrics 2006 </b> </A>,
+<b> <A HREF="http://www.cs.cmu.edu/~sigm07/"> Sigmetrics 2007 </b> </A>,
+<b> <A HREF="http://www.cs.columbia.edu/~sigmet08/"> Sigmetrics 2008 </b> </A>,
+<b> <A HREF="http://conferences.sigmetrics.org/sigmetrics/2009/"> Sigmetrics 2009 </b> </A>, <br/>
+<b> <A HREF="http://www.sigmetrics.org/sigmetrics2012/"> Sigmetrics 2012 </b> </A>, <b> <A HREF="http://www.sigmetrics.org/sigmetrics2014/"> Sigmetrics 2014 </b> </A>.
+<li> <b> <A HREF="http://perf2002.uniroma2.it/"> 
+Performance 2002 </b> </A> ,
+<b> 
+ <A HREF="http://www-sop.inria.ft/maestro/performance2005/"> 
+Performance 2005 </b> </A>,
+ <A HREF="http://performa.ulb.ac.be/""> 
+Performance 2010 </b> </A>,
+<A HREF="http://event.cwi.nl/performance2011/">
+Performance 2011 </b> </A>,
+<A HREF="http://performance2014.di.unito.it/">
+Performance 2014 </b> </A>.
+<li> <b> <A HREF="http://ecqt2014.ugent.be/drupal7/"> European Conference on Queueing Theory 2014 </b> </A>.
+<li> <b> <A HREF="http://www.engineering.leeds.ac.uk/computing/conferences/IC2E2013/"> IC2E 2013 </b> </A>.
+<li> <b> <A HREF="http://www.green-conf.org/"> IGCC 2012 </b> </A>.
+<li> <b> <A HREF="http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=8824&copyownerid=7395"> HotMetrics 2010 </b> </A>.
+<li> <b> <A HREF="http://static.usenix.org/event/hotpower08/"> HotPower 2008 </b> </A>,
+<b> <A HREF="http://hotpower09.stanford.edu/"> HotPower 2009 </b> </A>.
+<li> <b> <A HREF=""> MAMA 2007 </b> </A>,
+<b> <A HREF=""> MAMA 2008 </b> </A>,
+<b> <A HREF=""> MAMA 2009 </b> </A>.
+<li> <b> <A HREF="http://www2004.org/"> WWW 2004 </b> </A>, 
+<b> <A HREF="http://www2005.org/"> WWW 2005 </b> </A>, 
+<b> <A HREF="http://www2006.org/"> WWW 2006 </b> </A>. 
+<li> <b> <A HREF="http://www.qest.org/"> QEST 2006 </b> </A>,
+<b> <A HREF="http://www.qest.org/qest2007/">  QEST 2007 </b> </A>.
+<li> <b> <A HREF="http://www.sipew2008.org/"> SIPEW 2008 </b> </A>.
+</ul> <p>
+
+<hr> 
+
+<H3> <font color = darkgreen> ANNUAL TALK on Applying to Ph.D. Programs in Computer Science <A HREF="gradschooltalk.pdf"> (pdf)  </A>.</font>  </H3>
+
+<p>
+<p>
+
+</ul>
+
+<hr>
+
+<H3> <font color = darkgreen> TEACHING </font> </H3>
+
+<ul>
+<li> <b> (2014S) <b> 21-127 Concepts of Mathematics (undergraduate) </b> <p>
+<li> <b> (1999,2000,2001,2002,2003, 2005, 2006, 2009, 2011, 2012, <font color = red> Next in 2014F </font>) 
+<A HREF="Perfclass/class14fall.html"> 15-857 Analytical Performance Modeling (graduate) </A> </b> <p>
+<li> <b> (2004, 2006, 2007, 2008, 2012, 2013S&F, <font color = red> Next in 2015S </font>): 
+<A HREF="http://www.cs.cmu.edu/~harchol/15359/class.html"> 15-359 Probability and Computing (undergraduate) </A> </b> <p>
+<li> <b> (Spring 2007): <A HREF="Perfclass/class07.html"> 
+15-858A Advanced Stochastic Processes (graduate) </font> </b> </A> <p>
+<li> <b> (Spring 2000, Spring 2001, Fall 2002): <A HREF="http://www.cs.cmu.edu/~srini/15-441/F02/"> 15-441 Computer Networks (undergraduate)</b> </A> <p>
+<li> <b> (2000 through present): <A HREF="http://www.cs.cmu.edu/~varun/SQUALL/"> SQUALL (Scheduling and QUeueing Around Lunchtime) </b> </A> <p>
+<p>
+</ul>
+<hr>
+
+
+<p>
+<p>
+
+
+</dl>
+
+
+<TD> <img alt=" " src="downtownbig.jpg" BORDER=2 HEIGHT=150> </TD>
+
+
+<p>
+<hr>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41947448-1', 'cmu.edu');
+  ga('send', 'pageview');
+
+</script>
+</BODY>
+</HTML>
+
+
+
+

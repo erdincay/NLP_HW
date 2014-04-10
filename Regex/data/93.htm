@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Dr. Michael Haungs</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Le styles -->
+        <link href="Resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="Resources/css/general.css" rel="stylesheet">
+        <link href="Resources/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!-- Fav and touch icons -->
+        <!-- FIX:  UPDATE THIS -->
+        <!--link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="../assets/ico/favicon.png"-->
+    </head>
+
+    <body>
+
+        <!--div class="navbar navbar-inverse navbar-fixed-top"-->
+        <div class="navbar navbar-inverse navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="#">Home</a>
+                    <div class="nav-collapse collapse">
+                        <!--p class="navbar-text pull-right">
+                          Logged in as <a href="#" class="navbar-link">Username</a>
+                        </p-->
+                        <ul class="nav">
+                            <li><a href="#departments">Departments</a></li>
+                            <li><a href="#info">Additional Information</a></li>
+                            <li><a href="#gameDesign">Game Design</a></li>
+                            <li><a href="#" onClick="toggleAnimation();">Toggle Animation</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <!-- Background Canvas animation -->
+        <div style="text-align: center; font-size: 0">
+            <canvas style="position: fixed; z-index: -1; left: 0px; top: 0px; height:100%; width:100%;" id="canvasFun" width="100%" height="100%"></canvas>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span3">
+                    <div class="well sidebar-nav">
+                        <ul class="nav nav-list">
+                            <li class="nav-header">Courses</li>
+                            <li class="active"><a href="">Fall 2013: CSC 123</a></li>
+                            <li><a href="">Fall 2013: LAES 301/411</a></li>
+                            <li><a href="courses/CSC123/index.html">Winter 2014: CSC 171</a></li>
+                            <li><a href="courses/LAES301/index.html">Spring 2014: LAES 301/411</a></li>
+                            <li class="nav-header">Selected Publications</li>
+                            <li><a href="http://works.bepress.com/mhaungs/12">Assessing Student and Employer Satisfaction in a Liberal Arts/Engineering Bachelor of Arts Degree</a></li>
+                            <li><a href="http://works.bepress.com/mhaungs/2/">Improving First-year Success and Retention through Interest-Based CS0 Courses</a></li>
+                            <li><a href="http://works.bepress.com/mhaungs/1/">Improving Engineering Education through Creativity, Collaboration, and Context in a First Year Course</a></li>
+                            <li><a href="http://works.bepress.com/mhaungs/11/">CAMP: A Common API for Measuring Performance</a></li>
+                            <li><a href="http://works.bepress.com/mhaungs/4/">Enabling P2P Cooperative WMS Proxy Caching and Prefetching in an Educational Environment</a></li>
+                            <li><a href="http://works.bepress.com/mhaungs/3/">A Fast Connection-Time Redirection Mechanism for Internet Application Scalability</a></li>
+                            <li><a href="http://works.bepress.com/mhaungs/9/">Branch Transition Rate: A New Metric for Improved Branch Classification Analysis</a></li>
+                            <li><a href="http://works.bepress.com/mhaungs/">More...</a></li>
+                            <li class="nav-header">Check out my blog</li>
+                            <li><a href="http://mhaungs.wordpress.com">mhaungs.wordpress.com</a></li>
+                            <li class="nav-header">Github</li>
+                            <li><iframe src="http://githubbadge.appspot.com/badge/mhaungs" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder=0></iframe></li>
+                            <li class="nav-header">Social Networking</li>
+                            <li><a href="https://twitter.com/mhaungs" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @mhaungs</a>
+                                <script>!function(d, s, id) {
+                                    var js, fjs = d.getElementsByTagName(s)[0];
+                                    if (!d.getElementById(id)) {
+                                        js = d.createElement(s);
+                                        js.id = id;
+                                        js.src = "//platform.twitter.com/widgets.js";
+                                        fjs.parentNode.insertBefore(js, fjs);
+                                    }
+                                }(document, "script", "twitter-wjs");</script></li>
+                            <li><a href="javascript:document.getElementsByTagName('body')[0].appendChild(document.createElement('script')).setAttribute('src','//geekli.st/javascript/bookmarklet/bookmarklet.js')">
+                                    <img src="//geekli.st/images/assets/GeekIt_wFace.png"></a></li>
+                            <li><script src="//platform.linkedin.com/in.js" type="text/javascript">
+                                lang: en_US
+                                </script>
+                                <script type="IN/Share"></script></li>
+                            <li><!--script src="//platform.linkedin.com/in.js" type="text/javascript"></script--><!--duplicate-->
+                                <script type="IN/MemberProfile" data-id="http://www.linkedin.com/pub/michael-haungs/9/163/a48" data-format="hover" data-text="Michael Haungs" data-related="false"></script></li>
+                            <li class="nav-header">Fun Pictures</li>
+                            <li><a href="Resources/pages/pictureCarousel.html">Slide Show</a></li>
+                        </ul>
+                    </div><!--/.well -->
+                </div><!--/span-->
+                <div class="span9">
+                    <div class="hero-unit">
+                        <h1 align="center">Michael Haungs</h1>
+                        <center><a href="http://careers.stackoverflow.com/mhaungs">Professional Profile</a></center><br>
+                        <div class="row-fluid">
+                            <!--div class="span3">
+                                <center>
+                                    <img src="Resources/resources/haungs_mugshot.jpg" class="img-circle">
+                                </center>
+                            </div-->
+                            <div class="span6">
+                                <center>
+                                    <p> Computer Science Department <br>
+                                        California Polytechnic State University <br>
+                                        1 Grand Ave <br>
+                                        San Luis Obispo, California 93407 <br>
+                                    </p>
+                                </center>
+                            </div>
+                            <div class="span6">
+                                <center>
+                                    <p> Office: 226, Bldg. 14 <br>
+                                        Phone:  (805) 756-5531 <br>
+                                        FAX: (805) 756-2956 <br>
+                                        <a href="mailto:mhaungs@calpoly.edu">mhaungs@calpoly.edu</a> </p>
+                                </center>
+                            </div>
+                        </div><!--/row-->
+                    </div><!--/hero-->
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <a id="departments"></a>
+                            <hr> <h2 align="center">Associated Departments</h2> <hr>
+                            <div class="row-fluid">
+                                <div class="span6">
+                                    <h3>Computer Science</h3>
+                                    <p>The Computer Science Department educates students in the discipline of computer science and teaches them to apply their education to solve practical problems in a socially responsible way. Pursuant to the department's educational mission, faculty engage in research and professional development that allows them to remain current in their fields and to provide technological leadership to the university community. </p>
+                                    <p><a class="btn" href="https://www.csc.calpoly.edu">Learn more &raquo;</a></p>
+                                </div><!--/span-->
+                                <div class="span6">
+                                    <h3>Liberal Arts and Engineering Studies</h3>
+                                    <p> The BA degree program in <a href="http://laes.calpoly.edu">Liberal Arts and Engineering Studies</a> is jointly offered by the colleges of Liberal Arts and Engineering. This program prepares students
+                                        for a wide range of innovative careers in emerging professional fields that combine skills and
+                                        interests in engineering, the arts, technology, and culture, and also prepares them for further study
+                                        in graduate school. This program is open to all students at Cal Poly. </p>
+                                    <p><a class="btn" href="http://laes.calpoly.edu">Learn more &raquo;</a></p>
+                                </div><!--/span-->
+                            </div><!--/row-->
+                        </div><!--/span-->
+                    </div><!--/row-->
+                    <!--div class="row-fluid">
+                        <div class="span12">
+                            <a id="HTML5"></a>
+                            <h2 align="center">Simple HTML5 Examples</h2> <hr>
+                            <div class="row-fluid">
+                                <div class="span6">
+                                    <h3>Good Habits</h3>
+                                    <form name="habits">
+                                    <label><em>50/10 Rule (Work 50mins, Rest 10mins)</em></label>
+                                    <label>Todo List:</label>
+                                    <input name="todo1" type="text" class="input-block-level" placeholder="Todo 1">
+                                    <input name="todo2" type="text" class="input-block-level" placeholder="Todo 2">
+                                    <input name="todo3" type="text" class="input-block-level" placeholder="Todo 3">
+                                    <label class="checkbox">
+                                    <input name="waterCB" type="checkbox"> Drink Water
+                                    </label>
+                                    <label class="checkbox">
+                                    <input name="exerciseCB" type="checkbox"> Exercise
+                                    </label>
+                                    <label class="checkbox">
+                                    <input name="gratitudeCB" type="checkbox"> Express Gratitude
+                                    </label>
+                                    <label class="checkbox">
+                                    <input name="reflectCB" type="checkbox"> Reflect
+                                    </label>
+                                    <button type="button" class="btn" onClick="saveGoodHabitsData(this.form);">Save</button>
+                                    <button type="reset" class="btn" onClick="clearGoodHabitsData();">Clear</button>
+                                    </form>
+                                </div>
+                                  <div class="span6">
+                                    <h3>Cocos2d-html5</h3>
+                                    <div style="text-align: center; font-size: 0">
+                                      <canvas id="gameCanvas" width="350" height="450"> 
+                                      Your browser does not support the canvas tag </canvas>
+                                    </div>
+                                                    </div>
+                            </div>
+                        </div>
+                     </div><!--/row-->
+                    <br>
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <a id="info"></a>
+                            <hr> <h2 align="center">Additional Information</h2> <hr>
+                            <div class="row-fluid">
+                                <div class="span6">
+                                    <h2>About Me</h2>
+                                    <p>Michael Haungs is an Associate Professor in the Computer Science Department and Co-Director of the 
+                                        Liberal Arts and Engineering Studies (LAES) program at California Polytechnic State University.  
+                                        He received his B.S. degree in Industrial Engineering and Operations Research from the University of 
+                                        California, Berkeley, his M.S. degree in Computer Science from Clemson University, and his Ph.D in 
+                                        Computer Science from the University of California, Davis. Current work centers on web and cloud 
+                                        application development, game design and programming, and computer science education.</p>
+                                </div><!--/span-->
+                                <div class="span6">
+                                    <a id="gameDesign"></a>
+                                    <h2>Game Design</h2>
+                                    <p> Here are some simple games created with open source frameworks:</p>
+                                    <ul>
+                                        <li><em>(Not presently available)</em> Greenfoot: <a href="projects/AvoiderGame/playEnhanced/AvoiderGame-III.html">Avoider game</a> </li>
+                                        <ul>
+                                            <li> Game tips:  The game gets progressively harder.  You'll fire more often if you keep moving the mouse.</li>
+                                            <li><em>(Not presently available)</em>Checkout my <a href="projects/AGUpdate/AvoiderIntro.html">Greenfoot tutorial</a> on creating a simple Avoider game</li>
+                                        </ul>
+                                        <li>Enchant.js: <a href="projects/HaungsEnchant/haungsEnchant.html">Survive Haungs</a></li>
+                                        <ul>
+                                            <li>Directions:  Arrow keys to move, "a" key fires.  Don't let Haungs get you!</li>
+                                            <li>Disclaimer:  The game is pre-alpha, a rough draft, not complete, and not fun right now.</li>
+                                        </ul>
+                                    </ul>
+                                </div><!--/span-->
+                            </div>
+                        </div>
+
+                    </div><!--/row-->
+
+                    <hr>
+
+                    <footer>
+                        <p>&copy; CalPoly, San Luis Obispo 2013</p>
+                    </footer>
+
+                </div><!--/.fluid-container-->
+
+                <!-- Le javascript
+                ================================================== -->
+                <!-- Placed at the end of the document so the pages load faster -->
+                <script src="Resources/jquery/jquery-1.8.3.min.js"></script>
+                <script src="Resources/bootstrap/js/bootstrap.min.js"></script>
+                <!--script src="../assets/js/bootstrap-transition.js"></script>
+                <script src="../assets/js/bootstrap-alert.js"></script>
+                <script src="../assets/js/bootstrap-modal.js"></script>
+                <script src="../assets/js/bootstrap-dropdown.js"></script>
+                <script src="../assets/js/bootstrap-scrollspy.js"></script>
+                <script src="../assets/js/bootstrap-tab.js"></script>
+                <script src="../assets/js/bootstrap-tooltip.js"></script>
+                <script src="../assets/js/bootstrap-popover.js"></script>
+                <script src="../assets/js/bootstrap-button.js"></script>
+                <script src="../assets/js/bootstrap-collapse.js"></script>
+                <script src="../assets/js/bootstrap-carousel.js"></script>
+                <script src="../assets/js/bootstrap-typeahead.js"></script-->
+                <!--script src="Cocos2d-html5-v2.1.1/College/cocos2d.js"></script-->
+                <script src="Resources/scripts/mainIndex.js"></script>
+
+                </body>
+                </html>

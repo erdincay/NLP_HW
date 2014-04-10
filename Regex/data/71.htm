@@ -1,0 +1,1119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type"
+        content="text/html; charset=utf-8" />
+  <meta name="robots"
+        content="all" />
+  <meta name="generator"
+        content="RapidWeaver" />
+  <meta name="generatorversion"
+        content="4.0.1" />
+
+  <title></title>
+  <link rel="stylesheet"
+        type="text/css"
+        media="screen"
+        href="rw_common/themes/darakdash/styles.css" />
+  <link rel="stylesheet"
+        type="text/css"
+        media="print"
+        href="rw_common/themes/darakdash/print.css" />
+  <link rel="stylesheet"
+        type="text/css"
+        media="handheld"
+        href="rw_common/themes/darakdash/handheld.css" />
+  <link rel="stylesheet"
+        type="text/css"
+        media="screen"
+        href=
+        "rw_common/themes/darakdash/css/sidebar/sidebar_right.css" />
+        
+<script type="text/javascript"
+      src="rw_common/themes/darakdash/javascript.js">
+</script>
+</head>
+
+<body>
+  <div id="pageHeader">
+    <!-- Start page header -->
+
+    <h1>Stephen Brookes</h1>
+
+    <div id="navcontainer">
+      <!-- Start Navigation -->
+
+      <ul>
+        <li><a href="index.html"
+           rel="self"
+           id="current"
+           name="current"></a></li>
+      </ul>
+    </div><!-- End navigation -->
+  </div><!-- End page header -->
+
+  <div id="container">
+    <!-- Start container -->
+
+    <div id="contentTop"></div>
+
+    <div id="sidebarContainer">
+      <!-- Start Sidebar wrapper -->
+
+      <div id="sidebar">
+        <!-- Start sidebar content -->
+
+        <h1 class="sideHeader"></h1><!-- Sidebar header -->
+        <img src=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/steve_thumb.jpg" />
+        <br />
+        <br />
+        <!-- sidebar content you enter in the page inspector -->
+         <!-- sidebar content such as the blog archive links -->
+      </div><!-- End sidebar content -->
+    </div><!-- End sidebar wrapper -->
+
+    <div id="contentContainer">
+      <!-- Start main content wrapper -->
+
+      <div id="content">
+        <!-- Start content -->
+        Professor of Computer Science
+        <br />
+        Carnegie Mellon University
+        <br />
+        5000 Forbes Avenue
+        <br />
+        Pittsburgh, PA 15213, USA
+        <br />
+
+        <p>Phone: 412-268-8820
+        <br />
+        Fax: 412-268-4801
+        <br />
+        Email: brookes AT cs DOT cmu DOT edu
+        <br /></p>
+
+        <h1>Research</h1>My research concerns semantic models for
+        programming languages and logics for reasoning about the
+        behavior of concurrent programs.
+        <br />
+
+        <p>I have been involved in the development of
+        <em>Concurrent Separation Logic</em>, in collaboration with
+        John Reynolds and Peter O'Hearn. I am currently
+        investigating further extensions to this logic, and working
+        out the semantic underpinnings needed to validate logics
+        that combine concurrency with procedures and
+        communication.</p>
+
+        <h2>History</h2>My Ph.D. thesis, <em>A Model for
+        Communicating Sequential Processes</em>, was completed at
+        Oxford University (January 1983), where my advisor was Tony
+        Hoare.
+        <br />
+
+        <p>With Tony Hoare and Bill Roscoe, I developed the
+        <em>failures</em> model of CSP; later, Bill and I produced
+        an <em>improved failures</em> model that became the basis
+        for the implementation of the FDR model checker. I also
+        collaborated with Bill Rounds on the <em>possible
+        futures</em> model of CSP.
+        <br /></p>
+
+        <p>Over the years, I have produced a variety of semantic
+        models for concurrent languages, including <em>Idealized
+        CSP</em> and <em>Parallel Algol</em>. These languages
+        combine simply-typed call-by-name procedures, and
+        statically scoped blocks, with communication and
+        shared-memory concurrency, respectively.
+        <br /></p>
+
+        <p>I have introduced a family of trace-based semantic
+        models suitable for modelling programs in several
+        concurrency paradigms, including shared-memory as well as
+        asynchronous communicating processes and CSP-style
+        synchronously communicating processes.
+        <br /></p>
+
+        <p>I have worked with my erstwhile students (Shai Geva,
+        Denis Dancanet, Kathy Van Stone, Michel Schellekens) on
+        various aspects of <em>intensional</em> semantics, and I
+        continue to maintain an interest in this area. With Susan
+        Older, I worked on models for various notions of fairness.
+        My former student, Juergen Dingel, developed a methodology
+        for systematic parallel programming.</p>
+
+        <h2>Background</h2>A mathematical model, or
+        <em>semantics</em>, for a programming language can be used
+        to support program analysis and synthesis, to validate a
+        compiler, or may serve as the foundation for the design of
+        a logic for program specification and proof.
+        <br />
+
+        <p>I work mainly on the development of
+        <em>denotational</em> semantic models, characterized by the
+        property that the meaning of a program phrase is defined in
+        terms of the meanings of its syntactic sub-phrases. This
+        structural property ensures support for compositional
+        (syntax-directed) reasoning. I also work with
+        <em>operational</em> semantic models, in which program
+        behavior is typically explained in terms of the
+        computational behavior of an abstract machine. I aim to use
+        semantic models to guide the design of techniques and
+        logics for program proving.</p>
+
+        <p>My work aims to produce tractable semantic models whose
+        structure is as simple as possible while accurately
+        representing program behavior. This principle is usually
+        expressed more formally as a desire for <em>full
+        abstraction</em> with respect to the relevant notion of
+        program behavior: a semantic model should distinguish
+        between two program fragments precisely when there is a
+        program context in which the phrases can induce observably
+        different behavior.
+        <br /></p>
+
+        <p>Full abstraction means that the model is just concrete
+        enough to support compositional program analysis in a
+        manner faithful to the underlying notion of behavior. This
+        principle can be used as a criterion for judging the
+        utility of a semantic model with respect to a specific
+        notion of program behavior. However, by itself full
+        abstraction is not a panacea, and it can be difficult to
+        achieve: ideally it is preferable to work with a model that
+        is both sufficiently abstract to support accurate analysis
+        and has a clean enough mathematical structure that it can
+        be easily used to formalize concepts and perform proofs.
+        Elegance is a virtue, and arguably a necessity. My
+        foundational research has always been guided by such
+        principles, seeking to simplify without
+        over-simplification.
+        <br /></p>
+
+        <p>My main focus is on concurrent programming languages. A
+        long-term goal is to improve our ability to design
+        efficient, correct parallel systems and provide
+        foundational support for the development of tools to
+        facilitate concurrent programming design and analysis.
+        Concurrent programs are widely used, hard to get right, and
+        difficult to analyze.
+        <br /></p>
+
+        <p>In addition to <em>partial correctness</em> and
+        <em>total correctness</em>, we often need to be able to
+        establish <em>safety</em> properties, of the form that
+        something bad never happens, and <em>liveness</em>
+        properties, of the form that something good happens
+        eventually. It is notoriously difficult to ensure that
+        concurrent process interactions are sufficiently
+        disciplined to preclude undesirable phenomena such as
+        <em>races</em>, in which one process changes a piece of
+        state that is being used by another process, with
+        unreliable results.
+        <br /></p>
+
+        <p>Rather than relying on possibly unrealistic assumptions
+        about the granularity of hardware primitives, it is
+        preferable to use semantic models and proof techniques that
+        can guarantee correct behavior and the absence of races.
+        Further, we need to find ways to avoid or mitigate the
+        combinatorial explosion inherent in analyzing the ways in
+        which concurrent processes might interact.</p>
+
+        <p><br />
+        In summary, my work addresses the need for semantic models,
+        specification methods, and logics that support correctness
+        proofs with a guarantee of race-freedom (and absence of
+        other runtime errors).</p>
+
+        <h1>Papers</h1>
+
+        <p><em>A Semantics for Concurrent Separation Logic</em>.
+        <br />
+        S. Brookes. In: <b>Theoretical Computer Science</b>, Vol.
+        375, Festschrift for John C. Reynolds's 70th Birthday, May
+        2007. Extended version of paper from CONCUR 15.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/seplogicrevisedfinal-abstract.rtf">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/seplogicrevisedfinal.pdf">
+        paper</a>
+        <br /></p>
+
+        <p><em>A Brief History of Shared Memory</em>.
+        <br />
+        S. Brookes. Invited talk, MFPS XXIII, New Orleans, April
+        2007. Elsevier ENTCS 173.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfps2007abstract.rtf">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfps2007paper.pdf">
+        paper</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfps2007talk.pdf">slides</a>
+        <br /></p>
+
+        <p><em>Concurrent Separation Logic</em>.
+        <br />
+        S. Brookes. Lectures, Summer School on Dependable Software
+        Systems, Lugano, Switzerland, July 2007.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/lugano2007grayscale.pdf">
+        Lecture 1</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/luganopractical.pdf">
+        Lecture 2</a>
+        <br /></p>
+
+        <p><em>Variables as Resource for Shared Memory Programs:
+        Semantics and Soundness</em>.
+        <br />
+        S. Brookes. MFPS XXII, Genova, Italy, May 2006. Elsevier
+        ENTCS 158.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/variables-as-resources-abstract.rtf">
+        abstract</a> <a href=
+        "afs/cs.cmu.edu/user/brookes/www/papers/variables-as-resources-revised-again.pdf">
+        paper</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfps2006talk.pdf">slides</a></p>
+
+        <p><em>Concurrent separation logic: semantics and
+        soundness</em>.
+        <br />
+        S. Brookes. Tutorial, with Peter O'Hearn, MFPS XXII,
+        Genova, Italy, May 2006.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfps2006utorial.pdf">
+        slides</a>
+        <br /></p>
+
+        <p><em>A Semantics for Concurrent Permission Logic</em>.
+        <br />
+        S. Brookes. Talk presented in a workshop at Cambridge
+        University, March 2006.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/concurrentpermissionlogic.pdf">
+        slides</a>
+        <br /></p>
+
+        <p><em>A Grainless Semantics for Parallel Programs with
+        Shared Mutable Data</em>.
+        <br />
+        S. Brookes. MFPS XXI, Birmingham, England, May 2005.
+        Elsevier ENTCS 155.
+        <br />
+        Also presented at <em>Geometry of Computation
+        (Geocal'06)</em>, Marseilles, February 2006.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfpsxxi-abstract.rtf">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfpsxxi-brookesrevised.pdf">
+        paper</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/geocalslides.pdf">slides</a>
+        <br /></p>
+
+        <p><em>Retracing CSP</em>.
+        <br />
+        S. Brookes. In <b>Algebraic Process Calculi: The First 25
+        Years and Beyond</b>, Bertinoro, Italy, August 2005.
+        <br />
+        Elsevier ENTCS 162.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/bertinoro-abstract.rtf">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/bertinoroproceedings.pdf">
+        paper</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/bertinoro-slides.pdf">
+        slides</a>
+        <br /></p>
+
+        <p><em>A race-detecting semantics for concurrent
+        programs.</em>
+        <br />
+        S. Brookes. MFPS XX, Pittsburgh, May 2004.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfpsxxslides.pdf">slides</a>
+        <br /></p>
+
+        <p><em>A Semantics for Concurrent Separation Logic</em>.
+        <br />
+        S. Brookes. Invited paper, CONCUR 15, London, Springer LNCS
+        3170, August 2004. Slides from tutorial on Concurrent
+        Separation Logic (joint with Peter O'Hearn).
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/concur2004tutorial-abstract.rtf">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/concur2004tutorialpaper.pdf">
+        paper</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/concur2004blackslides.pdf">
+        slides</a>
+        <br /></p>
+
+        <p><em>Retracing the Semantics of CSP</em>.
+        <br />
+        S. Brookes. Invited paper, Conference on 25 Years of CSP,
+        London, July 2004.
+        <br />
+        Full version in: <b>25 Years of CSP</b>, A. Abdullah, C. B.
+        Jones, and J. Sanders, eds. Springer LNCS Festschrift
+        Series, vol. 3525 (2005).
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/csp25-abstract.rtf">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/csp25.pdf">paper</a>
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/csp25talk.pdf">slides</a>
+        <br /></p>
+
+        <p><em>Using transition traces to model a security
+        protocol</em>.
+        <br />
+        S. Brookes. Manuscript, March 2003.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfps999.pdf">paper</a>
+        <br /></p>
+
+        <p><em>Semantics of Parallel Programs.</em>
+        <br />
+        S. Brookes. Lecture given at Queens University, Kingston,
+        Ontario, February 2003.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/parallelclass.pdf">
+        slides</a>
+        <br /></p>
+
+        <p><em>The Essence of Parallel Algol</em>.
+        <br />
+        S. Brookes. <b>Information and Computation</b> 179(1),
+        2002. Extended version of paper from LICS'96.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/Essence-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/TheEssence-of-ParallelALgol.pdf">
+        paper</a>
+        <br /></p>
+
+        <p><em>Traces: a unifying semantic framework for parallel
+        programming languages</em>.
+        <br />
+        S. Brookes. MFPS 18, New Orleans, March 2002.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfps18-abstract.rtf">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfps18talk.pdf">slides</a>
+        <br /></p>
+
+        <p><em>Trace Semantics: Towards a Unification of Parallel
+        Paradigms</em>.
+        <br />
+        S. Brookes. Invited talk. Irish Conference on Mathematical
+        Foundations of Computer Science and Information Technology
+        (MFCSIT'02), National University of Ireland, Galway, 2002.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/galway.pdf">slides</a>
+        <br /></p>
+
+        <p><em>Traces, Pomsets, Fairness and Full Abstraction for
+        Communicating Processes</em>.
+        <br />
+        S. Brookes. CONCUR 2002, Brno, Czech Republic, August 2002.
+        Springer LNCS 2421.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/concur2002-abstract.rtf">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/concur2002rev.pdf">
+        paper</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/concur2002slides.pdf">
+        slides</a>
+        <br /></p>
+
+        <p><em>Transfer Principles for Reasoning about Concurrent
+        Programs</em>.
+        <br />
+        S. Brookes. MFPS 17, Aarhus, Denmark, May 2001. Elsevier
+        ENTCS 45.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfps201-abstract.rtf">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfps2001.pdf">paper</a>
+        <br /></p>
+
+        <p><em>Deconstructing CCS and CSP: Asynchronous
+        Communication, Fairness, and Full Abstraction</em>.
+        <br />
+        S. Brookes. MFPS 16, Hoboken, April 2000.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfps16-abstract.rtf">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfps16paper.pdf">paper</a>
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfps16.pdf">slides</a>
+        <br /></p>
+
+        <p><em>Reasoning about Recursive Processes: Expansion is
+        not always Fair</em>.
+        <br />
+        S. Brookes. MFPS 15, New Orleans, May 1999. Elsevier ENTCS
+        20.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfps99-abstract.rtf">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfps99revised.pdf">
+        paper</a>
+        <br /></p>
+
+        <p><em>The Essence of Parallel Algol</em>.
+        <br />
+        S. Brookes. 11th Conference on Logic in Computer Science
+        (LICS'96), July 1996, IEEE Computer Society Press.
+        <br />
+        Carnegie Mellon Technical Report CMU-CS-97-124.
+        <br />
+        Reprinted with permission as Chapter 21 of <b>Algol-like
+        Languages</b>, vol. 2, pp. 331-348, edited by P. O'Hearn
+        and R. D. Tennent, Birkhauser (1997).
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/lics96-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/CMU-CS-97-124.pdf">
+        paper</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/lics96slides.pdf">slides</a>
+        <br /></p>
+
+        <p><em>Communicating Parallel Processes</em>.
+        <br />
+        S. Brookes. In: <b>Millenium Perspectives in Computer
+        Science</b>, 1999 Oxford-Microsoft Symposium in honour of
+        Sir Tony Hoare, edited by J. Davies, A. W. Roscoe, and J.
+        Woodcock. Palgrave, 2000.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/hoare-abstract.rtf">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/hoare.pdf">paper</a>
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/oxfordtalk.pdf">slides</a>
+        <br /></p>
+
+        <p><em>On the Kahn Principle and Fair Networks</em>.
+        <br />
+        S. Brookes. MFPS 14, Queen Mary Westfield College, London,
+        May 1998.
+        <br />
+        Extended version: Technical Report CMU-CS-98-156, August
+        1998.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfps98-abstract.rtf">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfps98paper.pdf">paper</a>
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfps98slides.pdf">slides</a>
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/CMU-CS-98-156.pdf">
+        report</a>
+        <br /></p>
+
+        <p><em>Objects in Idealized CSP.</em>
+        <br />
+        S. Brookes. Talk given at Dagstuhl Seminar. 1998.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/objects98-2008.pdf">
+        slides</a>
+        <br /></p>
+
+        <p><em>Idealized CSP: Combining Procedures with
+        Communicating Processes</em>.
+        <br />
+        S. Brookes. MFPS 13, Pittsburgh, March 1997.
+        <br />
+        Elsevier ENTCS vol. 6.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfps97-abstract.rtf">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/MFPS97revised.pdf">
+        paper</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/MFPS97slides.pdf">slides</a>
+        <br /></p>
+
+        <p><em>Programming language expressiveness and circuit
+        complexity.</em>
+        <br />
+        D. Dancanet and S. Brookes. MFPS 12, Boulder, Colorado,
+        June 1996.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfps96-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfps96dancanet.pdf">
+        paper</a>
+        <br /></p>
+
+        <p><em>How to be Fair</em>.
+        <br />
+        S. Brookes. Distinguished Lecture, Kansas State University,
+        1996.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/ksu1.pdf">slides</a>
+        <br /></p>
+
+        <p><em>Parallel Algol: Combining Procedures with
+        Concurrency</em>.
+        <br />
+        S. Brookes. Talk given at Kansas State University, 1996.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/ksu2.pdf">slides</a>
+        <br /></p>
+
+        <p><em>Full Abstraction for a Shared-Variable Parallel
+        Language.</em>
+        <br />
+        S. Brookes. <b>Information and Computation</b>
+        127(2):145-163, Academic Press, June 1996.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/FullAbstractionSharedVariable-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/FullAbstractionSharedVariable.pdf">
+        paper</a>
+        <br /></p>
+
+        <p><em>Full Abstraction for Strongly Fair Communicating
+        Processes</em>.
+        <br />
+        S. Brookes and S. Older. MFPS 11, Elsevier ENTCS vol. 1,
+        March 1995.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/FullAbstractionStronglyFair-abstract.pdf">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/FullAbstractionStronglyFair.pdf">
+        paper</a>
+        <br /></p>
+
+        <p><em>Sequential Algorithms, Deterministic Parallelism,
+        and Intensional Expressiveness</em>.
+        <br />
+        S. Brookes and D. Dancanet. ACM Symposium on Principles of
+        Programming Languages (POPL'95), ACM Press, January 1995.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/SequentialAlgorithmsDancanet-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/SequentialAlgorithmsDancanet.pdf">
+        paper</a>
+        <br /></p>
+
+        <p><em>Fair Communicating Processes</em>.
+        <br />
+        S. Brookes. Chapter 4 of: <b>A Classical Mind: Essays in
+        Honour of C. A. R. Hoare</b>, edited by A. W. Roscoe.
+        Prentice-Hall International, January 1994.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/faircsp.pdf">paper</a>
+        <br /></p>
+
+        <p><em>Reasoning about Parallel Programs with Local
+        Variables</em>
+        <br />
+        S. Brookes. Talk given at MFPS 10, Manhattan, Kansas, 1994.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/mfps94talk.pdf">slides</a>
+        <br /></p>
+
+        <p><em>Using Fixed Point Theorems to Prove Retiming
+        Lemmas</em>.
+        <br />
+        S. Brookes. <b>Formal Methods in System Design</b>, vol. 2,
+        no. 1, Springer Netherlands, February 1993.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/UsingFixedPointSemantics-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/UsingFixedPointSemantics.pdf">
+        paper</a>
+        <br /></p>
+
+        <p><em>Full Abstraction for a Shared-Variable Parallel
+        Language.</em>
+        <br />
+        S. Brookes. Proc. 8th Conference on Logic in Computer
+        Science, Montreal, IEEE Computer Society Press, pp 98-109,
+        June 1993.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/lics93-abstract.pdf">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/lics93final.pdf">paper</a>
+        <br /></p>
+
+        <p><em>Monads and Comonads in Intensional Semantics.</em>
+        <br />
+        S. Brookes and K. van Stone, Carnegie Mellon Computer
+        Science Technical Report CMU-CS-93-140.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/MonadsComonads-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/MonadsComonads.pdf">
+        report</a>
+        <br /></p>
+
+        <p><em>Deadlock Analysis in Networks of Communicating
+        Processes</em>.
+        <br />
+        S. Brookes and A. W. Roscoe
+        <br />
+        <b>Distributed Computing</b> 4:209-230, 1991.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/DeadlockAnalysis-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/DeadlockAnalysis.pdf">
+        paper</a>
+        <br /></p>
+
+        <p><em>Towards a Theory of Intensional Semantics</em>.
+        <br />
+        S. Brookes and S. Geva. Talk given at Oxford, Edinburgh,
+        and Imperial College, July-August 1992.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/edinburgh.pdf">slides</a>
+        <br /></p>
+
+        <p><em>A Cartesian Closed Category of Parallel Algorithms
+        between Scott Domains</em>.
+        <br />
+        S. Brookes and S. Geva. Dagstuhl Seminar on Concurrency,
+        June 1991.
+        <br />
+        In: <b>Semantics of Programming Languages and Model
+        Theory</b>, edited by M. Droste and Y. Gurevich, Gordon and
+        Breach Science Publishers, 1993.
+        <br />
+        Also published as Technical Report CMU-CS-91-159.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/CMU-CS-91-159-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/CMU-CS-91-159.pdf">
+        report</a>
+        <br /></p>
+
+        <p><em>Sequential Functions on Indexed Domains and Full
+        Abstraction for a Sub-language of PCF</em>.
+        <br />
+        S. Brookes and S. Geva. MFPS 9, New Orleans, 1993. Springer
+        LNCS 802, 1994. Technical Report CMU-CS-93-163, April 1993.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/CMU-CS-93-163-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/CMU-CS-93-163.pdf">
+        report</a>
+        <br /></p>
+
+        <p><em>Historical introduction to "Concrete domains" by G.
+        Kahn and G. D. Plotkin</em>
+        <br />
+        S. Brookes. <b>Theoretical Computer Science</b> 121, pp.
+        179-186 (1993).
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/HistoricalIntroduction.pdf">
+        paper</a>
+        <br /></p>
+
+        <p><em>Towards a Theory of Parallel Algorithms on Concrete
+        Data Structures</em>.
+        <br />
+        S. Brookes and S. Geva. <b>Theoretical Computer Science</b>
+        101, pp. 177-221 (1992).
+        <br />
+        Also Technical Report CMU-CS-91-157.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/Towards-TCS-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/Towards-TCS.pdf">paper</a>
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/CMU-CS-91-157.pdf">
+        report</a>
+        <br /></p>
+
+        <p><em>Stable and Sequential Functions on Scott
+        Domains</em>.
+        <br />
+        S. Brookes and S. Geva. Technical Report CMU-CS-92-121,
+        June 1992.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/CMU-CS-92-121-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/CMU-CS-92-121.pdf">
+        report</a>
+        <br /></p>
+
+        <p><em>Stable and Sequential Functions on Scott Domains,
+        <br />
+        dI-domains and FM-domains</em>.
+        <br />
+        S. Brookes and S. Geva.
+        <br />
+        Talk given at MFPS 8, Oxford, 1992.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/seqlstabletalk.pdf">
+        slides</a>
+        <br /></p>
+
+        <p><em>Computational Comonads and Intensional
+        Semantics</em>.
+        <br />
+        S. Brookes and S. Geva. <b>Applications of Categories in
+        Computer Science</b>, Proc. London Mathematical Society
+        Symposium, LMS Lecture Notes Series, vol. 177, edited by M.
+        Fourman, P. T. Johnstone, and A. M. Pitts, Cambridge
+        University Press (1992).
+        <br />
+        Technical Report CMU-CS-91-190. October 1991.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/CompComonads-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/CompComonads.pdf">paper</a>
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/CMU-CS-91-190.pdf">
+        report</a>
+        <br /></p>
+
+        <p><em>Possible Futures, Acceptances, Refusals, and
+        Communicating Processes</em>.
+        <br />
+        S. Brookes and W. C. Rounds. 22nd IEEE Symposium on
+        Foundations of Computer Science, IEEE Press, October 1991.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/PossibleFutures-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/PossibleFutures.pdf">
+        paper</a>
+        <br /></p>
+
+        <p><em>Continuous Functions and Parallel Algorithms on
+        Concrete Data Structures</em>.
+        <br />
+        S. Brookes and S. Geva. MFPS 7, Pittsburgh, March 1991.
+        Springer LNCS vol. 598 (May 1992).
+        <br />
+        Technical Report CMU-CS-91-160.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/CMU-CS-91-160-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/CMU-CS-91-160.pdf">
+        report</a>
+        <br /></p>
+
+        <p><em>Towards a Theory of Parallel Algorithms on Concrete
+        Data Structures</em>.
+        <br />
+        S. Brookes and S. Geva. In: <b>Semantics for Concurrency,
+        Leicester 1990</b>, Proceedings of the International
+        BCS-FACS Workshop, edited by M. Z. Kwiatkowska, M. W.
+        Shields, and R. M. Thomas, Springer-Verlag (July 1990).
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/leicester-tcs-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/leicester-tcs.pdf">
+        paper</a>
+        <br /></p>
+
+        <p><em>An Operational Semantics for CSP</em>.
+        <br />
+        S. Brookes, A. W. Roscoe, and D. J. Walker. Manuscript,
+        1988.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/OperationalSemanticsCSP.pdf">
+        paper
+        <br /></a></p>
+
+        <p><em>Semantically Based Axiomatics</em>.
+        <br />
+        S. Brookes. MFPS 4, Boulder, 1988. Springer LNCS 298, pp.
+        312-330.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/SemanticalyBasedAxiomatics-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/SemanticallyBasedAxiomatics.pdf">
+        paper</a>
+        <br /></p>
+
+        <p><em>A Semantically Based Proof System for Partial
+        Correctness and Deadlock in CSP</em>.
+        <br />
+        S. Brookes. LICS'86, Cambridge, Massachusetts, IEEE Press,
+        June 1986.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/SemanticallyBasedProofSystem-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/SemanticallyBasedProofSystem.pdf">
+        paper</a>
+        <br /></p>
+
+        <p><em>An Axiomatic Treatment of Partial Correctness and
+        Deadlock in a Shared Variable Parallel Language</em>.
+        <br />
+        S. Brookes. Expanded and improved version of paper from
+        <em>Logics of Programs</em> (1985). Technical Report
+        CMU-CS-92-154, June 1992.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/AxTrPCDeadlock-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/AxTrPCDeadlock.pdf">
+        paper</a>
+        <br /></p>
+
+        <p><em>An Axiomatic Treatment of a Parallel Language</em>.
+        <br />
+        S. Brookes. In: <b>Logics of Programs</b>, Proceedings of
+        the International Conference, Brooklyn, edited by R.
+        Parikh, Springer LNCS 193, June 1985.
+        <br /></p>
+
+        <p><em>A Fully Abstract Semantics and a Proof System for an
+        Algol-like Language with Sharing</em>.
+        <br />
+        S. Brookes. Proc. 1st MFPS Conference, Manhattan, Kansas.
+        Springer LNCS vol. 239, April 1985. Revised, August 1989.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/sharing-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/sharing.pdf">paper</a>
+        <br /></p>
+
+        <p><em>On the Axiomatic Treatment of Concurrency</em>.
+        <br />
+        S. Brookes. NSF-SERC Seminar on Concurrency, Pittsburgh,
+        July 1984. Springer LNCS 197, 1985. Technical Report
+        CMU-CS-85-106.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/AxTrConc-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/AxTrConc.pdf">paper</a>
+        <br /></p>
+
+        <p><em>An Improved Failures Model for Communicating
+        Processes</em>.
+        <br />
+        S. Brookes and A. W. Roscoe
+        <br />
+        NSF-SERC Seminar on Concurrency, Pittsburgh, July 1984.
+        Springer LNCS 197, pp. 281-305, 1985.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/ImprovedFailures-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/ImprovedFailures.pdf">
+        paper</a>
+        <br /></p>
+
+        <p><em>A Theory of Communicating Sequential Processes</em>.
+        <br />
+        S. Brookes, C. A. R. Hoare, and A. W. Roscoe, <b>J. ACM</b>
+        vol. 31, pp. 560-599, July 1984.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/papers/ATheoryOfCSP-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/papers/ATheoryOfCSP.pdf">paper</a>
+        <br /></p>
+
+        <p><em>On the Relationship of CCS and CSP</em>.
+        <br />
+        S. Brookes. ICALP'83, Barcelona, Springer LNCS 158, July
+        1983.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/Relationship-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/Relationship.pdf">paper</a>
+        <br /></p>
+
+        <p><em>Behavioral Equivalence Relations Induced by
+        Programming Logics</em>.
+        <br />
+        S. Brookes and W. C. Rounds. ICALP'83, Barcelona, Springer
+        LNCS 58, July 1983.
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/BehavioralEquivalenceRelations-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/BehavioralEquivalenceRelations.pdf">
+        paper</a>
+        <br /></p>
+
+        <p><em>A Model for Communicating Sequential Processes</em>.
+        <br />
+        S. Brookes. Ph.D. thesis, Oxford University, 1983.
+        <br />
+        Technical Report CMU-CS-83-149 and Oxford University
+        Programming Research Group Technical Monograph PRG-35
+        (1983).
+        <br />
+        <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/thesis-abstract.rtfd">
+        abstract</a> <a href=
+        "/afs/cs.cmu.edu/user/brookes/www/papers/ModelCommunicatingSequentialProcesses.pdf">
+        thesis</a>
+        <br /></p>
+
+        <h2>Current Students</h2>
+
+        <ul>
+          <li>Ruy Ley-Wild</li>
+
+          <li>Carsten Varming (jointly advised by John
+          Reynolds)</li>
+        </ul>
+
+        <h2>Former Students</h2>
+
+        <ul>
+          <li>Kathy Van Stone</li>
+
+          <li style="list-style: none">
+            <ul>
+              <li><a href=
+              "/afs/cs.cmu.edu/user/brookes/www/papers/CMU-CS-03-150.pdf">
+              Thesis</a>: <em>A Denotational Approach to Measuring
+              Complexity in Functional Programs</em> (2003)</li>
+            </ul>
+          </li>
+
+          <li>Juergen Dingel</li>
+
+          <li style="list-style: none">
+            <ul>
+              <li><a href=
+              "/afs/cs.cmu.edu/usr/brookes/www/papers/CMU-CS-99-172.pdf">
+              Thesis</a>: <em>Systematic Parallel Programming</em>
+              (1999)</li>
+
+              <li>Current position: Associate Professor, School of
+              Computing, Queens University, Kingston, Ontario</li>
+            </ul>
+          </li>
+
+          <li>Denis Dancanet</li>
+
+          <li style="list-style: none">
+            <ul>
+              <li><a href=
+              "/afs/cs.cmu.edu/user/brookes/www/papers/CMU-CS-98-135.pdf">
+              Thesis</a>: <em>Intensional Investigations</em>
+              (1998)</li>
+
+              <li>Current position: investment bank, London.</li>
+            </ul>
+          </li>
+
+          <li>Susan Older</li>
+
+          <li style="list-style: none">
+            <ul>
+              <li><a href=
+              "/afs/cs.cmu.edu/user/brookes/www/papers/CMU-CS-96-204.pdf">
+              Thesis</a>: <em>A Denotational Framework for Fair
+              Communicating Processes</em> (1996)</li>
+
+              <li>Current position: Associate Professor, Syracuse
+              University</li>
+            </ul>
+          </li>
+
+          <li>Michel Schellekens</li>
+
+          <li style="list-style: none">
+            <ul>
+              <li>Thesis: <em>The Smyth Completion: a Common
+              Topological Foundation for Denotational Semantics and
+              Complexity Analysis</em> (1995)</li>
+
+              <li>Current position: Associate Professor, Department
+              of Computer Science, National University of Ireland,
+              Cork</li>
+            </ul>
+          </li>
+
+          <li>Shai Geva</li>
+
+          <li style="list-style: none">
+            <ul>
+              <li><a href=
+              "/afs/cs.cmu.edu/user/brookes/www/papers/CMU-CS-95-163.pdf">
+              Thesis</a>: <em>A Study of Higher-Order Sequential
+              Computation</em> (1995)</li>
+
+              <li>Current position: Chief Scientist, Mercado
+              Software</li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- End content -->
+    </div><!-- End main content wrapper -->
+
+    <div class="clearer"></div>
+  </div><!-- End container -->
+
+  <div id="contentBottom"></div>
+
+  <div id="footer">
+    <!-- Start Footer -->
+
+    <div id="breadcrumbcontainer">
+      <!-- Start the breadcrumb wrapper -->
+
+      <ul>
+        <li><a href="index.html"></a>&nbsp;&gt;&nbsp;</li>
+      </ul>
+    </div><!-- End breadcrumb -->
+  </div><!-- End Footer -->
+</body>
+</html>
