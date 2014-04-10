@@ -1,14 +1,25 @@
-import java.lang.String;
 import java.util.HashSet;
-import java.util.Vector;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class LineProcessor {
 
-    private static final String email_regex = "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])";
-    //private static final String email_regex = "[_A-Za-z0-9-]+(\\\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\\\.[A-Za-z0-9]+)*(\\\\.[A-Za-z]{2,})";
-    private static final String phone_regex = "^\\(?([0-9]{3})\\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$";
+    private static final String email_regex = "([a-z\\.%-]|(\\s+dot\\s+))+(\\s*@\\s*|\\s+\\(?at\\)?\\s+|&#x40;)([\\w\\.-]|(\\s+dot\\s+))+(\\.|\\s+dot\\s+)[a-z]{2,}";
+//    private static final String email_regex =
+//            "(?:" +
+//                "(?:[a-z0-9!#$%&'*?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")" +
+//                "@" +
+//                    "(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" +
+//                    "|\\[" +
+//                        "(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]" +
+//                        "|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\" +
+//                    "])" +
+//            ")" +
+//            "|(?:" +
+//                "([a-z\\.%-]|(\\s+dot\\s+))+(\\s*@\\s*|\\s+\\(?at\\)?\\s+|&#x40;)([\\w\\.-]|(\\s+dot\\s+))+(\\.|\\s+dot\\s+)[a-z]{2,}" +
+//            ")";
+
+    private static final String phone_regex = "(^|\\D)\\(?([0-9]{3})\\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})($|\\D)";
     private static final String number_regex = "\\d+";
     private Pattern email_pattern;
     private Pattern phone_pattern;
@@ -21,12 +32,19 @@ public class LineProcessor {
         number_pattern = Pattern.compile(number_regex);
     }
 
-    private HashSet<String> findEmails(String line) {
+    private String formatEmail(String email) {
+        return email.replace(" (at) ", "@").replace(" at ", "@").replace(" @ ", "@").replace("&#x40;", "@").replace(" dot ", ".");
+    }
+
+    public HashSet<String> findEmails(String line) {
 
         HashSet<String> ret = new HashSet<String>();
-        Matcher matcher = email_pattern.matcher(line);
+        Matcher matcher = email_pattern.matcher(line.toLowerCase());
         while (matcher.find()) {
-            ret.add(matcher.group());
+            String email = formatEmail(matcher.group());
+            if (email != null && !email.isEmpty()) {
+                ret.add(email);
+            }
         }
         return ret;
     }
@@ -50,7 +68,7 @@ public class LineProcessor {
         return ret;
     }
 
-    private HashSet<String> findPhoneNumbers(final String line) {
+    public HashSet<String> findPhoneNumbers(final String line) {
 
         HashSet<String> ret = new HashSet<String>();
         Matcher matcher = phone_pattern.matcher(line);
