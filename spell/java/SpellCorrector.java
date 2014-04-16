@@ -1,26 +1,58 @@
-import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Set;
 
 public class SpellCorrector {
-  // TODO(student): Feel free define private variables here to store whatever
-  // you trained.
+    private Set<String> learnedWords;
 
-  SpellCorrector() {
-    // TODO(student): Contructor to initialize your data-structure
-  }
+    public SpellCorrector() {
+        learnedWords = new HashSet<String>();
+    }
 
-  public void train(final String word) {
-    // TODO(student): Implement your own logic to model spell corrector using
-    // edit distance. This method will be called for every possible known valid
-    // word from corpus. Learn your model from this.
-  }
+    public void train(final String word) {
+        learnedWords.add(word);
+    }
 
-  public String correct(final String mispelled_word) {
-    // TODO(student): Use the model learnt in above method and return correct
-    // spelling for given word. Given a mispelled word, return your best
-    // predicted corrected word.
-    return wrong_word;
-  }
+    public String correct(final String mispelled_word) {
+        if (learnedWords.contains(mispelled_word)) {
+            return mispelled_word;
+        } else {
+            for (String word : learnedWords) {
+                if (LevenshteinDistance(mispelled_word, word) <= 1) {
+                    return word;
+                }
+            }
+        }
 
-  // TODO(student): Feel free to define private utility methods here.
+        return mispelled_word;
+    }
+
+    private int Minimum(int n1, int n2, int n3) {
+        return Math.min(Math.min(n1, n2), n3);
+    }
+
+    private int LevenshteinDistance(String src, String dst) {
+        int row_num = src.length() + 1;
+        int col_num = dst.length() + 1;
+        int[][] dis = new int[row_num][col_num];
+
+        for (int i = 0; i < row_num; i++) {
+            dis[i][0] = i;
+        }
+
+        for (int i = 0; i < col_num; i++) {
+            dis[0][i] = i;
+        }
+
+        for (int i = 1; i < row_num; i++) {
+            for (int j = 1; j < col_num; j++) {
+                if (src.charAt(i - 1) == dst.charAt(j - 1)) {
+                    dis[i][j] = Minimum(dis[i - 1][j] + 1, dis[i][j - 1] + 1, dis[i - 1][j - 1]);
+                } else {
+                    dis[i][j] = Minimum(dis[i - 1][j] + 1, dis[i][j - 1] + 1, dis[i - 1][j - 1] + 1);
+                }
+            }
+        }
+        return dis[row_num - 1][col_num - 1];
+    }
+
 }
