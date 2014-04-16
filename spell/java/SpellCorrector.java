@@ -13,13 +13,19 @@ public class SpellCorrector {
     }
 
     public String correct(final String mispelled_word) {
-        if (learnedWords.contains(mispelled_word)) {
-            return mispelled_word;
-        } else {
-            for (String word : learnedWords) {
-                if (LevenshteinDistance(mispelled_word, word) <= 1) {
-                    return word;
-                }
+//        if (learnedWords.contains(mispelled_word)) {
+//            return mispelled_word;
+//        } else {
+//            for (String word : learnedWords) {
+//                if (LevenshteinDistance(mispelled_word, word) <= 1) {
+//                    return word;
+//                }
+//            }
+//        }
+
+        for (String word : learnedWords) {
+            if (!word.equals(mispelled_word) && LevenshteinDistance(mispelled_word, word) <= 1) {
+                return word;
             }
         }
 

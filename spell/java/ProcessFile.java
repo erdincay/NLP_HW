@@ -84,8 +84,7 @@ public class ProcessFile {
                 ++num_correct;
             } else {
                 ++num_incorrect;
-                //System.out.println("Incorrect Correction: " + tokens[0] + " => " +
-                //                   corrected);
+                System.out.println("Incorrect Correction: " + tokens[0] + " => " + corrected + " : " + tokens[1]);
             }
         }
         System.out.println("Total: " + num_entries + " Correct: " + num_correct +
