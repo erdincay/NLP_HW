@@ -1,31 +1,91 @@
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class SpellCorrector {
-    private Set<String> learnedWords;
+    private class MyEntry implements Comparable, Map.Entry<String, Integer> {
+        private String key;
+        private Integer val;
+
+        public MyEntry(Map.Entry<String, Integer> pair) {
+            key = pair.getKey();
+            val = pair.getValue();
+        }
+
+        public Integer getValue() {
+            return val;
+        }
+
+        @Override
+        public Integer setValue(Integer value) {
+            val = value;
+
+            return 0;
+        }
+
+        public String getKey() {
+            return key;
+        }
+
+        @Override
+        public int compareTo(Object o) {
+            if (this == o) return 0;
+            if (!(o instanceof MyEntry)) return 0;
+
+            MyEntry e = (MyEntry) o;
+
+            return e.getValue().compareTo(getValue());
+        }
+    }
+
+    private final Integer defaultEditDis = 2;
+    private Map<String, Integer> learnedWords;
+    private Map<String, String> mem;
 
     public SpellCorrector() {
-        learnedWords = new HashSet<String>();
+        learnedWords = new HashMap<String, Integer>();
+        mem = new HashMap<String, String>();
     }
 
     public void train(final String word) {
-        learnedWords.add(word);
+        String lWord = word.toLowerCase();
+        if (learnedWords.containsKey(lWord)) {
+            learnedWords.put(lWord, learnedWords.get(lWord) + 1);
+        } else {
+            learnedWords.put(lWord, 1);
+        }
     }
 
     public String correct(final String mispelled_word) {
-//        if (learnedWords.contains(mispelled_word)) {
-//            return mispelled_word;
-//        } else {
-//            for (String word : learnedWords) {
-//                if (LevenshteinDistance(mispelled_word, word) <= 1) {
-//                    return word;
-//                }
-//            }
-//        }
+        Map<Integer, List<MyEntry>> ret = new HashMap<Integer, List<MyEntry>>();
 
-        for (String word : learnedWords) {
-            if (!word.equals(mispelled_word) && LevenshteinDistance(mispelled_word, word) <= 1) {
-                return word;
+        for (final Map.Entry<String, Integer> pair : learnedWords.entrySet()) {
+            Integer distance = LevenshteinDistance(pair.getKey(), mispelled_word);
+            if (distance <= defaultEditDis) {
+                if (ret.containsKey(distance)) {
+                    ret.get(distance).add(new MyEntry(pair));
+                } else {
+                    ret.put(distance, new LinkedList<MyEntry>() {{
+                        add(new MyEntry(pair));
+                    }});
+                }
+            }
+        }
+
+        for (int i = 1; i <= defaultEditDis; i++) {
+            if (ret.containsKey(i)) {
+                List<MyEntry> candidates = ret.get(i);
+                Collections.sort(candidates);
+                for (MyEntry e : candidates) {
+                    String word = e.getKey();
+
+                    if (mem.containsKey(word) && mem.get(word).equals(mispelled_word)){
+                        continue;
+                    }
+
+                    mem.put(word,mispelled_word);
+                    return word;
+                }
+
+                return candidates.get(0).getKey();
             }
         }
 
