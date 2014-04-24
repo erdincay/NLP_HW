@@ -1,0 +1,116 @@
+goldenOld.txt Total: 382 Correct: 80 Incorrect: 302
+goldenOld.txt Score(%): 20.94240837696335
+------------------------------------------------------------------
+
+goldenNew.txt Total: 782 Correct: 115 Incorrect: 667
+goldenNew.txt Score(%): 14.705882352941176
+------------------------------------------------------------------
+
+goldenOld.txt Total: 382 Correct: 80 Incorrect: 302
+goldenOld.txt Score(%): 20.94240837696335
+------------------------------------------------------------------
+
+goldenNew.txt Total: 782 Correct: 114 Incorrect: 668
+goldenNew.txt Score(%): 14.578005115089514
+------------------------------------------------------------------
+
+goldenOld.txt Total: 382 Correct: 80 Incorrect: 302
+goldenOld.txt Score(%): 20.94240837696335
+------------------------------------------------------------------
+
+goldenNew.txt Total: 782 Correct: 109 Incorrect: 673
+goldenNew.txt Score(%): 13.938618925831202
+------------------------------------------------------------------
+
+::no mem
+
+goldenOld.txt Total: 382 Correct: 80 Incorrect: 302
+goldenOld.txt Score(%): 20.94240837696335
+------------------------------------------------------------------
+
+goldenNew.txt Total: 782 Correct: 109 Incorrect: 673
+goldenNew.txt Score(%): 13.938618925831202
+------------------------------------------------------------------
+
+goldenOld.txt Total: 382 Correct: 80 Incorrect: 302
+goldenOld.txt Score(%): 20.94240837696335
+------------------------------------------------------------------
+
+goldenNew.txt Total: 782 Correct: 119 Incorrect: 663
+goldenNew.txt Score(%): 15.217391304347826
+------------------------------------------------------------------
+
+goldenOld.txt Total: 382 Correct: 80 Incorrect: 302
+goldenOld.txt Score(%): 20.94240837696335
+------------------------------------------------------------------
+
+goldenNew.txt Total: 782 Correct: 114 Incorrect: 668
+goldenNew.txt Score(%): 14.578005115089514
+------------------------------------------------------------------
+
+goldenOld.txt Total: 382 Correct: 80 Incorrect: 302
+goldenOld.txt Score(%): 20.94240837696335
+------------------------------------------------------------------
+
+goldenNew.txt Total: 782 Correct: 112 Incorrect: 670
+goldenNew.txt Score(%): 14.322250639386189
+------------------------------------------------------------------
+
+goldenOld.txt Total: 382 Correct: 80 Incorrect: 302
+goldenOld.txt Score(%): 20.94240837696335
+------------------------------------------------------------------
+
+goldenNew.txt Total: 782 Correct: 117 Incorrect: 665
+goldenNew.txt Score(%): 14.961636828644501
+------------------------------------------------------------------
+
+::return same words
+
+goldenOld.txt Total: 382 Correct: 65 Incorrect: 317
+goldenOld.txt Score(%): 17.015706806282722
+------------------------------------------------------------------
+
+goldenNew.txt Total: 782 Correct: 465 Incorrect: 317
+goldenNew.txt Score(%): 59.46291560102302
+------------------------------------------------------------------
+
+goldenOld.txt Total: 382 Correct: 65 Incorrect: 317
+goldenOld.txt Score(%): 17.015706806282722
+------------------------------------------------------------------
+
+goldenNew.txt Total: 782 Correct: 465 Incorrect: 317
+goldenNew.txt Score(%): 59.46291560102302
+------------------------------------------------------------------
+
+goldenOld.txt Total: 382 Correct: 65 Incorrect: 317
+goldenOld.txt Score(%): 17.015706806282722
+------------------------------------------------------------------
+
+goldenNew.txt Total: 782 Correct: 465 Incorrect: 317
+goldenNew.txt Score(%): 59.46291560102302
+------------------------------------------------------------------
+
+goldenOld.txt Total: 382 Correct: 65 Incorrect: 317
+goldenOld.txt Score(%): 17.015706806282722
+------------------------------------------------------------------
+
+goldenNew.txt Total: 782 Correct: 465 Incorrect: 317
+goldenNew.txt Score(%): 59.46291560102302
+------------------------------------------------------------------
+
+goldenOld.txt Total: 382 Correct: 65 Incorrect: 317
+goldenOld.txt Score(%): 17.015706806282722
+------------------------------------------------------------------
+
+goldenNew.txt Total: 782 Correct: 465 Incorrect: 317
+goldenNew.txt Score(%): 59.46291560102302
+------------------------------------------------------------------
+
+goldenOld.txt Total: 382 Correct: 65 Incorrect: 317
+goldenOld.txt Score(%): 17.015706806282722
+------------------------------------------------------------------
+
+goldenNew.txt Total: 782 Correct: 465 Incorrect: 317
+goldenNew.txt Score(%): 59.46291560102302
+------------------------------------------------------------------
+

@@ -38,11 +38,15 @@ public class SpellCorrector {
 
     private final Integer defaultEditDis = 2;
     private Map<String, Integer> learnedWords;
-    private Map<String, String> mem;
+    //private Map<String, String> mem;
+
+    public Map<String, Integer> getLearnedWords() {
+        return learnedWords;
+    }
 
     public SpellCorrector() {
         learnedWords = new HashMap<String, Integer>();
-        mem = new HashMap<String, String>();
+        //mem = new HashMap<String, String>();
     }
 
     public void train(final String word) {
@@ -70,18 +74,17 @@ public class SpellCorrector {
             }
         }
 
-        for (int i = 1; i <= defaultEditDis; i++) {
+        for (int i = 0; i <= defaultEditDis; i++) {
             if (ret.containsKey(i)) {
                 List<MyEntry> candidates = ret.get(i);
                 Collections.sort(candidates);
                 for (MyEntry e : candidates) {
                     String word = e.getKey();
 
-                    if (mem.containsKey(word) && mem.get(word).equals(mispelled_word)){
-                        continue;
-                    }
-
-                    mem.put(word,mispelled_word);
+//                    if (mem.containsKey(word) && mem.get(word).equals(mispelled_word)){
+//                        continue;
+//                    }
+//                    mem.put(word,mispelled_word);
                     return word;
                 }
 
