@@ -12,13 +12,13 @@ public class LanguageModel {
 
     Map<List<String>, Integer> wordDic;
     Map<List<String>, Integer> preDic;
-//    int totalWords;
+    int totalTokens;
 
 
     // TODO(student): Define your data-structure here.
 
     public LanguageModel() {
-//        totalWords = 0;
+        totalTokens = 0;
         edit_dist_model_ = new EditDistanceModel();
         wordDic = new HashMap<List<String>, Integer>();
         preDic = new HashMap<List<String>, Integer>();
@@ -47,6 +47,7 @@ public class LanguageModel {
         // TODO(student): your training code should go here
         for (Sentence sentence : corpus.getSentences()) { // iterate over sentences
             int Length = sentence.size();
+            totalTokens += Length - 2;
             if (gramSize <= 1) {
                 Length -= 1;
             }
@@ -70,9 +71,16 @@ public class LanguageModel {
                 List<String> wordKey = new ArrayList<String>(preKey);
                 wordKey.add(w);
                 AddGram(wordKey, wordDic);
-//                totalWords++;
             }
         }
+    }
+
+    private int VocabularySize() {
+        if (gramSize <= 1) {
+            return wordDic.size();
+        }
+
+        return preDic.size();
     }
 
     private double score(List<String> sentence) {
@@ -87,21 +95,20 @@ public class LanguageModel {
             Length -= 1;
         }
         for (int i = 1; i < Length; i++) {
-            List<String> preKey = new ArrayList<String>(gramSize);
+            List<String> key = new ArrayList<String>(gramSize);
             for (int j = gramSize - 1; j > 0; j--) {
                 int index = i - j;
                 if (index < 0) {
                     index = 0;
                 }
-                preKey.add(sentence.get(index));
+                key.add(sentence.get(index));
             }
-            int countPre = GetGram(preKey, preDic) + preDic.size();
+            int countPre = GetGram(key, preDic) + VocabularySize();
 
-            List<String> wordKey = new ArrayList<String>(preKey);
-            wordKey.add(sentence.get(i));
-            int countWord = GetGram(wordKey, wordDic) + 1;
+            key.add(sentence.get(i));
+            int countWord = GetGram(key, wordDic) + 1;
 
-            probability *= ((double) countWord) / countPre;
+            probability *= (double) countWord / countPre;
         }
         double score = Math.log(probability);
         return score;
