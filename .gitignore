@@ -213,7 +213,7 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
-Regex/.idea/
 *.class
+Regex/.idea/
 spell/.idea/
 spell/spell.iml
