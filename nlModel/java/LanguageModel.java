@@ -76,11 +76,14 @@ public class LanguageModel {
     }
 
     private int VocabularySize() {
+        int ret = 0;
         if (gramSize <= 1) {
-            return wordDic.size();
+            ret = wordDic.size();
         }
 
-        return preDic.size();
+        ret = preDic.size();
+
+        return  ret;
     }
 
     private double score(List<String> sentence) {
