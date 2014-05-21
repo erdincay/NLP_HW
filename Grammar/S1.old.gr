@@ -1,0 +1,87 @@
+# The start symbol is START.
+
+# These two rules are required; choose their weights carefully!
+99	START	S1
+10	START	S2
+
+
+
+1	S1	Verb NP Verb Adj EndOS
+
+# Questions
+
+1	S1	Question
+
+1	Question	Interrogation NP PronomVP ?
+1	Question	InterInv NP PronomVP ?
+
+
+1	Interrogation	DoDoes
+1	Interrogation	WH DoDoes
+
+1	InterInv	Verb PersPro Verb
+
+1	PronomVP	Verb
+1	PronomVP	Verb NP
+#1	PronomVP	Verb Location
+1	PronomVP	Verb PersPro Verb
+
+
+# Either/Neither
+1	S1	either NP VP or NP VP EndOS
+1	S1	neither NP nor NP VP EndOS
+
+
+
+
+# A general mine
+3	S1	VP NP EndOS
+1	S1	NP VP EndOS
+1	S1	VP Coord VP EndOS
+
+1	S1	NP Modal Verb ModalVP EndOS
+1	ModalVP	Verb
+1	ModalVP	Verb Prep NP
+
+1	S1	NP Verb Verb NP EndOS
+
+
+1	S1	VP Coord VP VP EndOS
+
+10	VP	NP VP
+5	VP	VP NP
+
+
+20	VP	Verb
+2	VP	Verb Adv
+6	VP	Verb Verb
+4	VP	DoDoes
+2	VP	Verb Verb Verb
+1	VP	Modal VP
+1	VP	WH VP
+
+
+1	S1	VP WH VP EndOS
+
+
+
+2	NP	NP Coord NP
+1	NP	Nbar
+20	NP	Det Nbar
+10	NP	ProperGroup
+5	NP	PersPro
+1	NP	NP NP
+1	NP	Prep NP
+
+8	ProperGroup	Proper
+1	ProperGroup	Det Proper
+
+5	Nbar	Noun
+1	Nbar	Adj Noun
+
+
+
+1	S1	NP Pause NP Pause VP EndOS
+1	S1	NP VP Pause NP EndOS
+1	S1	WH VP Pause VP EndOS
+1	S1	DoDoes Neg VP EndOS

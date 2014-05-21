@@ -1,0 +1,20 @@
+1	S2
+1	S2	MiscG EndOS
+
+1	MiscG	Misc
+1	MiscG	Misc MiscG
+
+1	Misc	Noun
+1	Misc	Proper
+1	Misc	Verb
+1	Misc	Modal
+1	Misc	DoDoes
+1	Misc	Adj
+1	Misc	Det
+1	Misc	Prep
+1	Misc	Coord
+1	Misc	PersPro
+1	Misc	Adv
+1	Misc	WH
+1	Misc	Possess
+1	Misc	Neg

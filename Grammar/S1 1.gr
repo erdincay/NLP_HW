@@ -1,0 +1,274 @@
+# The start symbol is START.
+
+# These two rules are required; choose their weights carefully!
+# S1 is the start symbol of the grammar you construct
+# S2 is the start symbol of the grammar that is the default fallback.
+99	START	S1
+1	START	S2
+
+# This is a very, very, very simple grammar to get you started.
+
+1	S1	Verb NP Verb Adj EndOS
+
+# Questions
+
+1	S1	Question
+
+1	Question	Interrogation NP PronomVP ?
+1	Question	InterInv NP PronomVP ?
+
+
+1	Interrogation	DoDoes
+1	Interrogation	WH DoDoes
+
+1	InterInv	Verb PersPro Verb
+
+1	PronomVP	Verb
+1	PronomVP	Verb NP
+#1	PronomVP	Verb Location
+1	PronomVP	Verb PersPro Verb
+
+
+# Either/Neither
+1	S1	either NP VP or NP VP EndOS
+1	S1	neither NP nor NP VP EndOS
+
+# A general mine
+3	S1	VP NP EndOS
+1	S1	NP VP EndOS
+1	S1	VP Coord VP EndOS
+
+1	S1	NP Modal Verb ModalVP EndOS
+1	ModalVP	Verb
+1	ModalVP	Verb Prep NP
+
+1	S1	NP Verb Verb NP EndOS
+
+
+1	S1	VP Coord VP VP EndOS
+
+10	VP	NP VP
+5	VP	VP NP
+
+
+20	VP	Verb
+2	VP	Verb Adv
+6	VP	Verb Verb
+4	VP	DoDoes
+2	VP	Verb Verb Verb
+1	VP	Modal VP
+1	VP	WH VP
+
+
+1	S1	VP WH VP EndOS
+
+
+
+2	NP	NP Coord NP
+1	NP	Nbar
+20	NP	Det Nbar
+10	NP	ProperGroup
+5	NP	PersPro
+1	NP	NP NP
+1	NP	Prep NP
+
+8	ProperGroup	Proper
+1	ProperGroup	Det Proper
+
+5	Nbar	Noun
+1	Nbar	Adj Noun
+
+
+
+1	S1	NP Pause NP Pause VP EndOS
+1	S1	NP VP Pause NP EndOS
+1	S1	WH VP Pause VP EndOS
+1	S1	DoDoes Neg VP EndOS
+
+
+# End-of-sentence.
+1	EndOS	!
+10	EndOS	.
+1	EndOS	?
+3	Misc	EndOS
+
+# Pauses.
+1	Pause	,
+1	Pause	...
+1	Pause	--
+1	Pause	;
+1	Pause	:
+5	Misc	Pause
+
+# Coordinating conjunctions.
+1	Coord	and
+1	Coord	but
+1	Coord	or
+1	Coord	either
+1	Coord	nor
+1	Coord	neither
+1	Coord	so
+1	Coord	that
+1	Coord	while
+1	Coord	because
+1	Coord	if
+
+# Modals.
+1	Modal	can
+1	Modal	could
+1	Modal	may
+1	Modal	might
+1	Modal	must
+1	Modal	ought
+1	Modal	shall
+1	Modal	should
+1	Modal	will
+1	Modal	would
+
+# 'do'/'does'
+1	DoDoes	do
+1	DoDoes	does
+
+# 'not'
+1	Neg	not
+
+# Wh-determiners.
+1	WH	that
+1	WH	what
+1	WH	which
+
+# Wh-pronouns.
+1	WH	what
+1	WH	who
+
+# Wh possessive pronoun.
+1	WH	whose
+
+# Wh-adverbs
+1	WH	how
+1	WH	when
+1	WH	where
+1	WH	why
+
+# Adjectives.
+1	Adj	bloody
+1	Adj	weary
+1	Adj	unable
+1	Adj	trusty
+1	Adj	further
+1	Adj	sacred
+1	Adj	tropical
+1	Adj	indigenous
+1	Adj	temperate
+1	Adj	hot
+1	Adj	lucky
+1	Adj	simple
+1	Adj	tiny
+1	Adj	hard	
+1	Adj	sensational
+1	Adj	comparable
+1	Adj	angolian
+1	Adj	yellow
+1	Adj	plodding
+
+# Personal pronouns.
+1	PersPro	he
+1	PersPro	her
+1	PersPro	him
+1	PersPro	it
+1	PersPro	one
+1	PersPro	she
+1	PersPro	them
+1	PersPro	they
+
+# Adverbs.
+1	Adv	again
+1	Adv	already
+1	Adv	currently
+1	Adv	frequently
+1	Adv	precisely
+1	Adv	south
+1	Adv	successfully
+1	Adv	unfortunately
+
+1	Verb	has
+1	Verb	covers
+1	Verb	is
+1	Verb	drinks
+1	Verb	carries
+1	Verb	rides
+
+# Verbs (base form).
+1	Verb	have
+1	Verb	speak
+1	Verb	cover
+1	Verb	be
+1	Verb	ride
+1	Verb	drink
+1	Verb	grow
+1	Verb	carry
+1	Verb	suggest
+1	Verb	migrate
+1	Verb	know
+
+
+# Verbs (past tense).
+1	Verb	had
+1	Verb	spoke
+1	Verb	covered
+1	Verb	was
+1	Verb	were
+1	Verb	rode
+1	Verb	drank
+1	Verb	grew
+1	Verb	carried
+1	Verb	suggested
+1	Verb	migrated
+1	Verb	knew
+
+# Verbs (present participles).
+1	Verb	having
+1	Verb	speaking
+1	Verb	covering
+1	Verb	being
+1	Verb	riding
+1	Verb	drinking
+1	Verb	growing
+1	Verb	carrying
+1	Verb	suggesting
+1	Verb	migrating
+1	Verb	knowing
+
+
+# Verbs (past participle).
+1	Verb	had
+1	Verb	spoken
+1	Verb	covered
+1	Verb	been
+1	Verb	ridden
+1	Verb	drunk
+1	Verb	grown
+1	Verb	carried
+1	Verb	suggested
+1	Verb	migrated
+1	Verb	known
+
+# More third person singular verbs.
+1	Verb	speaks
+1	Verb	grows
+1	Verb	migrates
+1	Verb	suggests
+1	Verb	knows
+
+# Verbs (present, plural, third person).
+1	Verb	have
+1	Verb	speak
+1	Verb	cover
+1	Verb	are
+1	Verb	ride
+1	Verb	drink
+1	Verb	grow
+1	Verb	carry
+1	Verb	suggest
+1	Verb	migrate
+1	Verb	know

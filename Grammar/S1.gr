@@ -4,18 +4,398 @@
 # S1 is the start symbol of the grammar you construct
 # S2 is the start symbol of the grammar that is the default fallback.
 99	START	S1
-1	START	S2
+10	START	S2
 
-# This is a very, very, very simple grammar to get you started.
 
-1	S1	NP VP .
+1	S1	VerbT NP VerbT Adj EndS
 
-1	VP	VerbT NP
+1	S1	either NP VP or NP VP EndS
+1	S1	neither NP nor NP VP EndS
 
-20	NP	Det Nbar
-1	NP	Proper
 
-20	Nbar	Noun
-1	Nbar	Nbar PP
+3	S1	VP NP EndS
+1	S1	NP VP EndS
+1	S1	VP Link VP EndS
 
-1	PP	Prep NP
+1	S1	NP Modal VerbT ModalVP EndS
+1	ModalVP	VerbT
+1	ModalVP	VerbT Prep NP
+
+1	S1	NP VerbT VerbT NP EndS
+
+
+1	S1	VP Link VP VP EndS
+
+10	VP	NP VP
+5	VP	VP NP
+
+
+20	VP	VerbT
+2	VP	VerbT Adv
+6	VP	VerbT VerbT
+4	VP	DoDoes
+2	VP	VerbT VerbT VerbT
+1	VP	Modal VP
+1	VP	WH VP
+
+
+1	S1	VP WH VP EndS
+
+
+
+2	NP	NP Link NP
+1	NP	Nar
+20	NP	Det Nar
+10	NP	Propers
+5	NP	PersonalPronun
+1	NP	NP NP
+1	NP	Prep NP
+
+8	Propers	Proper
+1	Propers	Det Proper
+
+5	Nar	Noun
+1	Nar	Adj Noun
+
+
+
+1	S1	NP Pause NP Pause VP EndS
+1	S1	NP VP Pause NP EndS
+1	S1	WH VP Pause VP EndS
+1	S1	DoDoes Neg VP EndS
+
+1	S1	Question
+
+1	Question	InterGr NP PrononVP ?
+1	Question	InterPers NP PrononVP ?
+
+
+1	InterGr	DoDoes
+1	InterGr	WH DoDoes
+
+1	InterPers	VerbT PersonalPronun VerbT
+
+1	PrononVP	VerbT
+1	PrononVP	VerbT NP
+1	PrononVP	VerbT PersonalPronun VerbT
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Singular and mass nouns.  Notice that only the
+# ones that start with consonants get our Noun tag.
+1	Noun	castle
+1	Noun	king
+1	Noun	defeater
+1	Noun	sovereign
+1	Noun	servant
+1	Noun	corner
+1	Noun	land
+1	Noun	quest
+1	Noun	chalice
+1	Noun	master
+1	Noun	horse
+1	Noun	fruit
+1	Noun	swallow
+1	Noun	sun
+1	Noun	winter
+1	Noun	coconut
+1	Noun	pound
+1	Noun	husk
+1	Noun	home
+1	Noun	weight
+1	Noun	story
+
+# Determiners.
+1	Det	a
+1	Det	another
+1	Det	any
+1	Det	each
+1	Det	every
+1	Det	no
+1	Det	that
+1	Det	the
+1	Det	this
+
+# Prepositions.
+1	Prep	above
+1	Prep	across
+1	Prep	at
+1	Prep	below
+1	Prep	by
+1	Prep	for
+1	Prep	from
+1	Prep	into
+1	Prep	near
+1	Prep	of
+1	Prep	on
+1	Prep	over
+1	Prep	through
+1	Prep	with
+
+# Proper nouns.  Note that our Proper tag is just for people.
+1	Proper	Arthur
+1	Proper	Guinevere
+1	Proper	Sir Lancelot
+1	Proper	Sir Bedevere
+1	Proper	Zoot
+1	Proper	Dingo
+1	Proper	Patsy
+1	Proper	Uther Pendragon
+
+# Verbs (third person singular present).
+# Note that only transitive verbs get our VerbT tag,
+# and some of those could also function as intransitives!
+1	VerbT	has
+1	VerbT	covers
+1	VerbT	is
+1	VerbT	drinks
+1	VerbT	carries
+1	VerbT	rides
+
+# End-of-sentence.
+1	EndS	!
+10	EndS	.
+1	EndS	?
+3	Misc	EndS
+
+# Pauses.
+1	Pause	,
+1	Pause	...
+1	Pause	--
+1	Pause	;
+1	Pause	:
+5	Misc	Pause
+
+# Linkinating conjunctions.
+1	Link	and
+1	Link	but
+1	Link	or
+1	Link	either
+1	Link	nor
+1	Link	neither
+1	Link	so
+
+# Numbers.
+1	Det	eight
+1	Det	five
+1	Det	one
+1	Det	5.5
+1	Det	sixty
+1	Det	5,000
+
+# Expletive.
+1	Misc	there
+
+# Subordinating conjunctions.
+1	Link	that
+1	Link	so
+1	Link	while
+1	Link	because
+1	Link	if
+
+# Modals.
+1	Modal	can
+1	Modal	could
+1	Modal	may
+1	Modal	might
+1	Modal	must
+1	Modal	ought
+1	Modal	shall
+1	Modal	should
+1	Modal	will
+1	Modal	would
+
+
+# Adjectives.
+1	Adj	  bloody
+1	Adj	  weary
+1	Adj	  unable
+1	Adj	  trusty
+1	Adj	  further
+1	Adj	  sacred
+1	Adj	  tropical
+1	Adj	  indigenous
+1	Adj	  temperate
+1	Adj	  hot
+1	Adj	  lucky
+1	Adj	  simple
+1	Adj	  tiny
+1	Adj	  hard	
+1	Adj	  sensational
+1	Adj	  comparable
+1	Adj	  angolian
+1	Adj	  yellow
+1	Adj	  plodding
+
+# Comparative adjectives.
+1	Adj	  bloodier
+1	Adj	  wearier
+1	Adj	  trustier
+1	Adj	  hotter
+1	Adj	  simpler
+1	Adj	  tinier
+1	Adj	  harder
+
+# Superlative adjectives.
+1	Adj	  bloodiest
+1	Adj	  weariest
+1	Adj	  trustiest
+1	Adj	  hottest
+1	Adj	  simplest
+1	Adj	  tiniest
+1	Adj	  hardest
+
+# Plural nouns.
+1	Noun	coconuts
+1	Noun	halves
+1	Noun	snows
+1	Noun	mountains
+1	Noun	areas
+1	Noun	strangers
+1	Noun	inches
+1	Noun	snakes
+1	Noun	ants
+1	Noun	nights
+
+# More proper nouns, not people.
+
+1	Proper	Camelot
+1	Proper	England
+1	Proper	Holy Grail
+1	Proper	Round Table
+
+# Plural proper nouns.
+1	Proper	Britons
+1	Proper	Saxons
+
+# Personal pronouns.
+1	PersonalPronun	 he
+1	PersonalPronun	 her
+1	PersonalPronun	 him
+1	PersonalPronun	 it
+1	PersonalPronun	 one
+1	PersonalPronun	 she
+1	PersonalPronun	 them
+1	PersonalPronun	 they
+
+
+# Possessive personal pronouns
+1	Det	 her
+1	Det	 his
+1	Det	 its
+1	Det	 their
+
+# Adverbs.
+1	Adv	 again
+1	Adv	 already
+1	Adv	 currently
+1	Adv	 frequently
+1	Adv	 precisely
+1	Adv	 south
+1	Adv	 successfully
+1	Adv	 unfortunately
+
+# 'do'/'does'
+1	DoDoes	do
+1	DoDoes	does
+
+# 'to'
+1	Prep	to
+
+# 'not'
+1	Neg  not
+
+# Verbs (base form).
+1	VerbT	have
+1	VerbT	speak
+1	VerbT	cover
+1	VerbT	be
+1	VerbT	ride
+1	VerbT	drink
+1	VerbT	grow
+1	VerbT	carry
+1	VerbT	suggest
+1	VerbT	migrate
+1	VerbT	know
+
+# Verbs (past tense).
+1	VerbT	had
+1	VerbT	spoke
+1	VerbT	covered
+1	VerbT	was
+1	VerbT	were
+1	VerbT	rode
+1	VerbT	drank
+1	VerbT	grew
+1	VerbT	carried
+1	VerbT	suggested
+1	VerbT	migrated
+1	VerbT	knew
+
+# Verbs (present participles).
+1	VerbT	having
+1	VerbT	speaking
+1	VerbT	covering
+1	VerbT	being
+1	VerbT	riding
+1	VerbT	drinking
+1	VerbT	growing
+1	VerbT	carrying
+1	VerbT	suggesting
+1	VerbT	migrating
+1	VerbT	knowing
+
+# Verbs (past participle).
+1	VerbT	had
+1	VerbT	spoken
+1	VerbT	covered
+1	VerbT	been
+1	VerbT	ridden
+1	VerbT	drunk
+1	VerbT	grown
+1	VerbT	carried
+1	VerbT	suggested
+1	VerbT	migrated
+1	VerbT	known
+
+# More third person singular verbs.
+1	VerbT	speaks
+1	VerbT	grows
+1	VerbT	goes
+1	VerbT	migrates
+1	VerbT	suggests
+1	VerbT	knows
+
+# Verbs (present, plural, third person).
+1	VerbT	have
+1	VerbT	speak
+1	VerbT	cover
+1	VerbT	are
+1	VerbT	ride
+1	VerbT	drink
+1	VerbT	grow
+1	VerbT	carry
+1	VerbT	suggest
+1	VerbT	migrate
+1	VerbT	know
+
+# Wh-determiners.
+1	WH	that
+1	WH	what
+1	WH	which
+
+# Wh-pronouns.
+1	WH	what
+1	WH	who
+
+# Wh possessive pronoun.
+1	WH	whose
+
+# Wh-adverbs
+1	WH	how
+1	WH	when
+1	WH	where
+1	WH	why
+
+
+# Possessive marker.
+1	Possess	's
