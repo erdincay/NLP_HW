@@ -6,12 +6,10 @@
 99	START	S1
 10	START	S2
 
-
-1	S1	VerbT NP VerbT Adj EndS
-
 1	S1	either NP VP or NP VP EndS
 1	S1	neither NP nor NP VP EndS
 
+1	S1	VerbT NP VerbT Adj EndS
 
 3	S1	VP NP EndS
 1	S1	NP VP EndS
@@ -23,13 +21,10 @@
 
 1	S1	NP VerbT VerbT NP EndS
 
-
 1	S1	VP Link VP VP EndS
 
 10	VP	NP VP
 5	VP	VP NP
-
-
 20	VP	VerbT
 2	VP	VerbT Adv
 6	VP	VerbT VerbT
@@ -38,10 +33,7 @@
 1	VP	Modal VP
 1	VP	WH VP
 
-
 1	S1	VP WH VP EndS
-
-
 
 2	NP	NP Link NP
 1	NP	Nar
@@ -58,7 +50,6 @@
 1	Nar	Adj Noun
 
 
-
 1	S1	NP Pause NP Pause VP EndS
 1	S1	NP VP Pause NP EndS
 1	S1	WH VP Pause VP EndS
@@ -69,7 +60,6 @@
 1	Question	InterGr NP PrononVP ?
 1	Question	InterPers NP PrononVP ?
 
-
 1	InterGr	DoDoes
 1	InterGr	WH DoDoes
 
@@ -79,7 +69,7 @@
 1	PrononVP	VerbT NP
 1	PrononVP	VerbT PersonalPronun VerbT
 
-#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Singular and mass nouns.  Notice that only the
 # ones that start with consonants get our Noun tag.
 1	Noun	castle
@@ -256,14 +246,14 @@
 1	Noun	ants
 1	Noun	nights
 
-# More proper nouns, not people.
+# More Proper nouns, not people.
 
 1	Proper	Camelot
 1	Proper	England
 1	Proper	Holy Grail
 1	Proper	Round Table
 
-# Plural proper nouns.
+# Plural Proper nouns.
 1	Proper	Britons
 1	Proper	Saxons
 

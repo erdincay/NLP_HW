@@ -10,7 +10,7 @@
 # given to Misc.  You will want to develop your own tags for these!
 
 
-#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Singular and mass nouns.  Notice that only the
 # ones that start with consonants get our Noun tag.
 1	Noun	castle
@@ -187,14 +187,14 @@
 1	Noun	ants
 1	Noun	nights
 
-# More proper nouns, not people.
+# More Proper nouns, not people.
 
 1	Proper	Camelot
 1	Proper	England
 1	Proper	Holy Grail
 1	Proper	Round Table
 
-# Plural proper nouns.
+# Plural Proper nouns.
 1	Proper	Britons
 1	Proper	Saxons
 
