@@ -1,0 +1,7 @@
+cat Vocab.gr S1.gr S2.gr | ./parse -i examples.sen -C
+cat Vocab.gr S1.gr S2.gr | ./parse -i examples.sen | ./prettyprint
+cat Vocab.gr S1.gr S2.gr | ./parse -i examples.sen -nC
+
+cat Vocab.gr S1.gr S2.gr | ./randsent -n 20 
+cat Vocab.gr S1.gr S2.gr | ./randsent -n 20 -t
+cat Vocab.gr S1.gr S2.gr | ./randsent -n 20 -t | ./prettyprint
