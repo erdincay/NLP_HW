@@ -4,7 +4,7 @@
 # S1 is the start symbol of the grammar you construct
 # S2 is the start symbol of the grammar that is the default fallback.
 99	START	S1
-10	START	S2
+1	START	S2
 
 1	S1	either NP VP or NP VP EndS
 1	S1	neither NP nor NP VP EndS
@@ -55,7 +55,7 @@
 1	S1	WH VP Pause VP EndS
 1	S1	DoDoes Neg VP EndS
 
-1	S1	Question
+2	S1	Question
 
 1	Question	InterGr NP PrononVP ?
 1	Question	InterPers NP PrononVP ?
@@ -72,6 +72,7 @@
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Singular and mass nouns.  Notice that only the
 # ones that start with consonants get our Noun tag.
+
 1	Noun	castle
 1	Noun	king
 1	Noun	defeater
